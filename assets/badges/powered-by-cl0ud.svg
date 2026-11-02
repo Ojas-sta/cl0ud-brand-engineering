@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 28" width="170" height="28" fill="none">
+  <!-- GitHub Shield Style: Powered by cl0ud -->
+  <clipPath id="clipPowered">
+    <rect width="170" height="28" rx="5"/>
+  </clipPath>
+  <g clip-path="url(#clipPowered)">
+    <rect width="90" height="28" fill="#0B0F19"/>
+    <rect x="90" width="80" height="28" fill="#00E5FF"/>
+    
+    <!-- Left label -->
+    <text x="12" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#F8FAFC" letter-spacing="0.02em">POWERED BY</text>
+    
+    <!-- Right label -->
+    <text x="103" y="19" font-family="'Outfit', 'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#0B0F19" letter-spacing="-0.02em">cl0ud</text>
+  </g>
+  <rect width="170" height="28" rx="5" stroke="#334155" stroke-opacity="0.6" fill="none"/>
+</svg>

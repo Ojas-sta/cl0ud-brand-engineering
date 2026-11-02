@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 28" width="310" height="28" fill="none">
+  <!-- Combined Badge: Powered by cl0ud | Co-engineered by Ojas Singh -->
+  <clipPath id="clipHybrid">
+    <rect width="310" height="28" rx="5"/>
+  </clipPath>
+  <g clip-path="url(#clipHybrid)">
+    <rect width="130" height="28" fill="#0B0F19"/>
+    <rect x="130" width="180" height="28" fill="#0F172A"/>
+    
+    <text x="10" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#00E5FF">POWERED BY cl0ud</text>
+    <text x="142" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#94A3B8">|  CO-ENG BY OJAS SINGH</text>
+  </g>
+  <rect width="310" height="28" rx="5" stroke="#00E5FF" stroke-opacity="0.5" fill="none"/>
+</svg>

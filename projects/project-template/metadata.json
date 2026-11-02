@@ -1,0 +1,31 @@
+{
+  "projectId": "PRJ-XXX",
+  "projectName": "New Project Template",
+  "projectDescription": "Comprehensive technical description of the system and its intended mission.",
+  "projectCategory": "Autonomous Robotics & Mechatronics",
+  "projectOwner": "Project Authors / Collaborating Team",
+  "contributors": [
+    "Primary Author",
+    "Co-Author",
+    "Ojas Singh (Systems Architect)"
+  ],
+  "cl0udInvolvement": "Powered by",
+  "ojasSinghContribution": "Detailed breakdown of technical assistance or co-engineering work provided.",
+  "engineeringScope": [
+    "Subsystem 1 scope",
+    "Subsystem 2 scope"
+  ],
+  "technologyStack": [
+    "Technology 1",
+    "Technology 2"
+  ],
+  "repositoryUrl": "https://github.com/Ojas-sta/repo-name",
+  "documentationUrl": "https://github.com/Ojas-sta/repo-name#readme",
+  "projectStatus": "In Development",
+  "version": "0.1.0",
+  "license": "MIT License",
+  "attributionRequirements": "Powered by cl0ud | Co-engineered by Ojas Singh",
+  "thirdPartyDependencies": [],
+  "mediaAssets": [],
+  "projectAcknowledgements": []
+}

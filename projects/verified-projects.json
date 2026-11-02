@@ -1,0 +1,311 @@
+[
+  {
+    "projectId": "PRJ-001",
+    "projectName": "Project CLOUD: Autonomous Quadruped Docent & Makerspace Utility Steward",
+    "projectDescription": "Autonomous cyber-physical robotic platform based on the Unitree Go2 Edu quadruped, operating dual cognitive identities: ARGUS for makerspace AprilTag tool verification and liquid hazard classification, and THE DOCENT for conversational VIP exhibition tours.",
+    "projectCategory": "Autonomous Robotics & Mechatronics",
+    "projectOwner": "DPSI Student Robotics Team & DPS Indirapuram",
+    "contributors": [
+      "Ojas Singh (Lead Systems Architect)",
+      "DPSI Student Robotics Team",
+      "Laboratory Faculty Mentors"
+    ],
+    "cl0udInvolvement": "Powered by",
+    "ojasSinghContribution": "Lead systems architecture, back-load guide rail structural CAD integration, 3D printed dual-bay utility caddy, isolated multi-rail step-down electrical topology, and conversational RAG narration engine.",
+    "engineeringScope": [
+      "12-DOF Unitree Go2 active joint kinematics integration",
+      "Back-load guide rail mounting with silicone vibration isolation",
+      "Isolated step-down DC electrical distribution (24V -> 12V/5V) with back-EMF suppression",
+      "Intel RealSense D435i optical baseline calibration & 4D ultra-wide LiDAR navigation",
+      "Dual persona cognitive state machine (ARGUS utility mode & Docent exhibition mode)"
+    ],
+    "technologyStack": [
+      "ROS 2 Humble",
+      "Unitree Go2 SDK",
+      "Intel RealSense SDK",
+      "Python 3.11",
+      "C++",
+      "Whisper",
+      "Piper TTS",
+      "Ollama",
+      "Onshape CAD"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/Cloud_DPSI-EXPO26",
+    "documentationUrl": "https://github.com/Ojas-sta/Cloud_DPSI-EXPO26/blob/main/PROJECT.md",
+    "projectStatus": "Field Deployed",
+    "version": "5.0.0",
+    "license": "Custom Academic & Institutional License (DPSI / Open Source Monograph)",
+    "attributionRequirements": "Mandatory credit: 'Engineered by DPSI Student Robotics Team | Systems Architecture powered by cl0ud | Co-engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "Unitree Robotics Go2 Firmware",
+      "Intel RealSense SDK 2.0",
+      "ROS 2 Humble Hawksbill",
+      "OpenCV 4.x"
+    ],
+    "mediaAssets": [
+      "screenshots/slide_0.png",
+      "screenshots/slide_1.png",
+      "screenshots/slide_2.png"
+    ],
+    "projectAcknowledgements": [
+      "DPS Indirapuram Administration",
+      "Makerspace Laboratory Safety Officers",
+      "Unitree Robotics Open Source Community"
+    ]
+  },
+  {
+    "projectId": "PRJ-002",
+    "projectName": "DPSI Tech & Innovation Exhibition 3D Virtual Floor Plan & Live Anti-Cheat Voting System",
+    "projectDescription": "Photorealistic architectural 3D virtual floor plan and live exhibition voting web platform with a 4-layer anti-cheat security mechanism and fuzzy search across 35 project booths.",
+    "projectCategory": "Spatial Computing & 3D Web",
+    "projectOwner": "DPS Indirapuram (DPSI)",
+    "contributors": [
+      "Ojas Singh (Lead Web Architect & 3D Developer)",
+      "DPSI Exhibition Organizing Committee"
+    ],
+    "cl0udInvolvement": "Powered by",
+    "ojasSinghContribution": "Full-stack 3D scene architecture, PBR architectural material tuning (Carrara white floor, titanium plinths), Three.js camera rigs, Zustand state management, and 4-tier anti-cheat voting verification.",
+    "engineeringScope": [
+      "React Three Fiber (R3F) 3D architectural floor plan rendering",
+      "PBR materials, soft contact shadows, and celestial skybox tuning",
+      "4-layer anti-cheat voting engine (fingerprinting, IP rate-limiting, honeypots, session validation)",
+      "Automated GitHub Actions CI/CD to Cloudflare Pages"
+    ],
+    "technologyStack": [
+      "Next.js (App Router)",
+      "TypeScript",
+      "Three.js",
+      "React Three Fiber (R3F)",
+      "Zustand",
+      "Framer Motion",
+      "Cloudflare Pages"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/dpsi-exhibition",
+    "documentationUrl": "https://dpsiexibition.pages.dev",
+    "projectStatus": "Active",
+    "version": "1.0.0",
+    "license": "MIT License (Web Core) & DPSI Institutional Assets",
+    "attributionRequirements": "Mandatory credit: 'Powered by cl0ud | Co-engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "three",
+      "@react-three/fiber",
+      "@react-three/drei",
+      "framer-motion",
+      "zustand"
+    ],
+    "mediaAssets": [
+      "public/textures/milkyway_smooth.jpg"
+    ],
+    "projectAcknowledgements": [
+      "DPS Indirapuram Exhibition Committee",
+      "Cloudflare Pages",
+      "Three.js community"
+    ]
+  },
+  {
+    "projectId": "PRJ-003",
+    "projectName": "WorldXD: JEPA-WMS Real-Time Robotic Arm Simulation Platform",
+    "projectDescription": "Advanced robotic arm simulation engine powered by Meta's Joint Embedding Predictive Architecture for World Models in Simulation (JEPA-WMS), optimized natively for Apple Silicon (MPS backend) to couple visual planning in latent feature space with low-level analytical inverse kinematics.",
+    "projectCategory": "World Models & AI Simulation",
+    "projectOwner": "cl0ud (Ojas Singh)",
+    "contributors": [
+      "Ojas Singh (Creator & Author)"
+    ],
+    "cl0udInvolvement": "Created by",
+    "ojasSinghContribution": "Conception, mathematical formulation of feature-space loss, PyTorch MPS hardware acceleration pipeline, and analytical 6-DOF inverse kinematics solver.",
+    "engineeringScope": [
+      "JEPA latent representation training for robotic arm path predictions",
+      "Metal Performance Shaders (MPS) memory-mapped execution on Apple Silicon",
+      "Analytical closed-form Inverse Kinematics (IK) and Jacobian matrix solver",
+      "Real-time visual rendering of trajectory envelopes"
+    ],
+    "technologyStack": [
+      "Python 3.11",
+      "PyTorch (MPS)",
+      "Meta JEPA / V-JEPA",
+      "NumPy",
+      "SciPy",
+      "Matplotlib"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/WorldXD",
+    "documentationUrl": "https://github.com/Ojas-sta/WorldXD#readme",
+    "projectStatus": "Active",
+    "version": "0.4.0",
+    "license": "MIT License",
+    "attributionRequirements": "Standard credit: 'Created by cl0ud | Engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "torch",
+      "torchvision",
+      "numpy",
+      "scipy"
+    ],
+    "mediaAssets": [],
+    "projectAcknowledgements": [
+      "Meta AI Research (JEPA team)",
+      "Apple Machine Learning Research"
+    ]
+  },
+  {
+    "projectId": "PRJ-004",
+    "projectName": "DPSI TinkerTek Open-Source Firmware & Agentic OS",
+    "projectDescription": "Open-source drivers, firmware, I2C register maps, and Agentic OS runtime for School For Schools (s4s) ICRobot, ICBricks, and Arduino Uno R4 WiFi.",
+    "projectCategory": "Embedded Systems & Firmware",
+    "projectOwner": "DPSI & Ojas Singh",
+    "contributors": [
+      "Ojas Singh (Lead Firmware Architect)",
+      "School For Schools (s4s) Engineering"
+    ],
+    "cl0udInvolvement": "Co-engineered by",
+    "ojasSinghContribution": "Authoring I2C register map specifications, C++ microcontroller driver libraries, and modular Arduino Uno R4 WiFi communication bridge.",
+    "engineeringScope": [
+      "Hardware I2C slave register protocol design",
+      "Arduino Uno R4 Renesas RA4M1 bare-metal register interaction",
+      "ESP32-S3 wireless bridge telemetry for remote motor and sensor actuation",
+      "Comprehensive developer register documentation"
+    ],
+    "technologyStack": [
+      "C++",
+      "Arduino C",
+      "Renesas RA4M1 Toolchain",
+      "I2C Protocol",
+      "Git"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/DPSI_TinkerTek",
+    "documentationUrl": "https://github.com/Ojas-sta/DPSI_TinkerTek#readme",
+    "projectStatus": "Active",
+    "version": "1.2.0",
+    "license": "Apache 2.0 License",
+    "attributionRequirements": "Mandatory credit: 'Co-engineered by Ojas Singh | cl0ud Open Firmware'",
+    "thirdPartyDependencies": [
+      "Arduino Core for Renesas RA4M1",
+      "Wire Library"
+    ],
+    "mediaAssets": [],
+    "projectAcknowledgements": [
+      "School For Schools (s4s) Initiative",
+      "DPS Indirapuram Innovation Lab"
+    ]
+  },
+  {
+    "projectId": "PRJ-005",
+    "projectName": "Autonomous Mobile Smart Dustbin with Target Tracking",
+    "projectDescription": "Smart robotic mobility base engineered to autonomously navigate indoor spaces, track human users or waste targets via computer vision, and maneuver dynamically to provide hands-free disposal access.",
+    "projectCategory": "Autonomous Service Robotics",
+    "projectOwner": "Student Innovation Collaboration Project",
+    "contributors": [
+      "Student Project Team (Core Mechanics & Enclosure)",
+      "Ojas Singh (Autonomous Navigation & Vision Tracking Advisor)"
+    ],
+    "cl0udInvolvement": "Technical assistance by",
+    "ojasSinghContribution": "Architectural guidance on differential drive kinematic control, optical target tracking with OpenCV, ultrasonic obstacle avoidance filtering, and power bus stability.",
+    "engineeringScope": [
+      "Target detection and centroid tracking algorithms via optical feed",
+      "Closed-loop PID motor velocity control for differential drive base",
+      "Sensor fusion with multi-directional ultrasonic distance sensors",
+      "Electrical safety and battery voltage regulation"
+    ],
+    "technologyStack": [
+      "Python",
+      "OpenCV",
+      "Raspberry Pi / ESP32",
+      "L298N / TB6612FNG Motor Drivers",
+      "Ultrasonic Arrays"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/autonomous-smart-dustbin",
+    "documentationUrl": "documentation/engineering-portfolio.md#prj-005",
+    "projectStatus": "In Development",
+    "version": "0.8.0",
+    "license": "MIT License (Open Hardware/Software Collaboration)",
+    "attributionRequirements": "Credit block: 'Project by Student Engineering Team | Technical Assistance by cl0ud & Ojas Singh'",
+    "thirdPartyDependencies": [
+      "opencv-python",
+      "numpy",
+      "RPi.GPIO"
+    ],
+    "mediaAssets": [],
+    "projectAcknowledgements": [
+      "School Innovation Exhibition Panel",
+      "Peer Hardware Collaborators"
+    ]
+  },
+  {
+    "projectId": "PRJ-006",
+    "projectName": "Automated Hydroponic Farming Environmental IoT System",
+    "projectDescription": "Precision agricultural IoT monitoring and automation station maintaining optimal nutrient pH, electrical conductivity (EC), ambient light cycles, and automated reservoir replenishment for indoor soilless cultivation.",
+    "projectCategory": "AgriTech & Environmental IoT",
+    "projectOwner": "Student Agriculture & Sustainability Initiative",
+    "contributors": [
+      "Hydroponics Research Team (Plant Biology & Bed Fabrication)",
+      "Ojas Singh (IoT Telemetry & Automation Advisor)"
+    ],
+    "cl0udInvolvement": "Technical assistance by",
+    "ojasSinghContribution": "Sensor calibration algorithms for analog pH and EC probes, MQTT telemetry reporting dashboard, peristaltic pump automated dosing logic, and safe 12V relay switching.",
+    "engineeringScope": [
+      "Analog probe noise filtering and multi-point calibration math",
+      "Automated dosing algorithm for pH Up/Down and nutrient solution A/B",
+      "Real-time MQTT telemetry push to local dashboard and mobile alerts",
+      "Submersible pump dry-run protection and water level float switches"
+    ],
+    "technologyStack": [
+      "C++",
+      "ESP32",
+      "MQTT / WebSockets",
+      "Node-RED",
+      "Peristaltic Dosing Pumps",
+      "Analog Sensor ADC"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/hydroponic-iot-telemetry",
+    "documentationUrl": "documentation/engineering-portfolio.md#prj-006",
+    "projectStatus": "In Development",
+    "version": "0.9.0",
+    "license": "CERN Open Hardware Licence v2 / MIT Code",
+    "attributionRequirements": "Credit block: 'Project by Hydroponics Sustainability Team | Technical Assistance by cl0ud & Ojas Singh'",
+    "thirdPartyDependencies": [
+      "PubSubClient",
+      "DallasTemperature",
+      "OneWire"
+    ],
+    "mediaAssets": [],
+    "projectAcknowledgements": [
+      "DPSI Biology & Environmental Sciences Department",
+      "Peer Agricultural Builders"
+    ]
+  },
+  {
+    "projectId": "PRJ-007",
+    "projectName": "Spatial-OS & Vision-Track: Web-Based Spatial Computing Environment",
+    "projectDescription": "Web-native spatial computing experiment recreating Apple Vision Pro hand tracking and gesture interactions inside standard modern web browsers using MediaPipe and WebGL.",
+    "projectCategory": "Spatial Computing & 3D Web",
+    "projectOwner": "cl0ud (Ojas Singh)",
+    "contributors": [
+      "Ojas Singh (Creator & Author)"
+    ],
+    "cl0udInvolvement": "Created by",
+    "ojasSinghContribution": "Pinch-to-interact gesture smoothing, 3D hand landmark depth projection, and zero-dependency web canvas renderer.",
+    "engineeringScope": [
+      "21-point 3D hand landmark estimation via MediaPipe",
+      "Index-thumb pinch threshold detection with hysteresis filtering",
+      "Interactive floating UI windows with spatial parallax"
+    ],
+    "technologyStack": [
+      "JavaScript (ES6)",
+      "MediaPipe Hands",
+      "HTML5 Canvas",
+      "CSS3 3D Transforms"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/Spatial-OS",
+    "documentationUrl": "https://github.com/Ojas-sta/Spatial-OS#readme",
+    "projectStatus": "Active",
+    "version": "1.0.0",
+    "license": "MIT License",
+    "attributionRequirements": "Standard credit: 'Created by cl0ud | Engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "@mediapipe/camera_utils",
+      "@mediapipe/hands"
+    ],
+    "mediaAssets": [],
+    "projectAcknowledgements": [
+      "Google MediaPipe Research Team"
+    ]
+  }
+]

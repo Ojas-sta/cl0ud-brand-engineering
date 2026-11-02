@@ -1,0 +1,53 @@
+# cl0ud Engineering Ecosystem Licensing Framework
+
+The cl0ud engineering brand and repository ecosystem utilizes a dual-licensing framework to balance open-source technical collaboration with the protection of brand identity:
+
+---
+
+## 1. Software, Firmware & Tooling License: MIT License
+
+Copyright (c) 2026 Ojas Singh / cl0ud (https://github.com/Ojas-sta)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 2. Brand Marks, Logos & Badges License: CC BY-NC-ND 4.0
+
+The cl0ud logos, wordmarks, vector assets, and brand badges (contained in `assets/logos/`, `assets/badges/`, and `assets/icons/`) are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License**.
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format solely for the purpose of attributing verified engineering contributions.
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit to Ojas Singh / cl0ud, provide a link to this repository, and indicate if changes were made.
+- **NonCommercial** — You may not use the brand assets for commercial purposes without prior written authorization.
+- **NoDerivatives** — If you remix, transform, or build upon the logo assets, you may not distribute the modified material as official cl0ud branding.
+
+---
+
+## 3. Technical Documentation & Monographs: CC BY 4.0
+
+The architectural monographs, specifications, guides, and schematics (contained in `brand/`, `engineering/`, `documentation/`, and `projects/`) are licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/

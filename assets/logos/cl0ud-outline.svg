@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" width="280" height="70" fill="none">
+  <!-- Outline Vector for laser cutting and CNC plinth marking -->
+  <rect width="278" height="68" x="1" y="1" rx="11" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="4 2"/>
+
+  <g transform="translate(18, 14)">
+    <path d="M 28 8 A 9 9 0 0 1 36 17 A 7 7 0 0 1 41 24 A 6 6 0 0 1 37 34 L 10 34 A 8 8 0 0 1 7 19 A 9 9 0 0 1 17 11 A 10 10 0 0 1 28 8 Z" 
+          stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="23" cy="22" rx="4.5" ry="6" stroke="#00E5FF" stroke-width="1.8"/>
+    <line x1="20" y1="26" x2="26" y2="18" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(75, 43)">
+    <text font-family="'Outfit', 'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="28" stroke="#00E5FF" stroke-width="1" fill="none" letter-spacing="-0.03em">cl0ud</text>
+    <text x="84" y="-3" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="10" stroke="#00E5FF" stroke-width="0.5" fill="none" letter-spacing="0.18em">.OUTLINE</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node & Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+build/
+dist/
+
+# Python & AI
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.pt
+*.pth
+*.onnx
+.ipynb_checkpoints/
+
+# Embedded & C++
+*.o
+*.obj
+*.hex
+*.elf
+*.bin
+build-*/
+.pio/
+.vscode/
+.idea/
+
+# Hardware & CAD Temporary
+*.step.tmp
+*.stl.tmp
+*~
+*.swp
+*.swo
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

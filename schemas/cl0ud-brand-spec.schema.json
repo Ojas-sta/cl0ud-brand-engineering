@@ -1,0 +1,775 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cl0ud.engineering/schemas/cl0ud-brand-spec.schema.json",
+  "title": "cl0ud Brand & Engineering Specification Schema",
+  "description": "Standard schema for validating cl0ud brand specifications, founder credentials, visual tokens, project registries, attribution frameworks, and governance policies.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "version",
+    "lastUpdated",
+    "brandIdentity",
+    "founderIdentity",
+    "logoSystem",
+    "visualDesignSystem",
+    "projectEcosystem",
+    "brandingAttributionSystem",
+    "termsAndConditions",
+    "brandGovernance",
+    "repositoryGovernance",
+    "jsonValidation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date"
+    },
+    "brandIdentity": {
+      "type": "object",
+      "required": [
+        "name",
+        "stylizedName",
+        "pronunciation",
+        "variants",
+        "positioning",
+        "purpose",
+        "mission",
+        "vision",
+        "personality",
+        "values",
+        "voice",
+        "messaging",
+        "taglines",
+        "brandStory",
+        "usagePrinciples"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "enum": ["cl0ud", "CL0UD"] },
+        "stylizedName": { "type": "string" },
+        "pronunciation": { "type": "string" },
+        "variants": {
+          "type": "object",
+          "required": ["primary", "uppercase", "wordmark", "developerHandle"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": { "type": "string" },
+            "uppercase": { "type": "string" },
+            "wordmark": { "type": "string" },
+            "developerHandle": { "type": "string" }
+          }
+        },
+        "positioning": { "type": "string" },
+        "purpose": { "type": "string" },
+        "mission": { "type": "string" },
+        "vision": { "type": "string" },
+        "personality": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 3
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["principle", "description"],
+            "additionalProperties": false,
+            "properties": {
+              "principle": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "voice": {
+          "type": "object",
+          "required": ["tone", "attributes", "doList", "dontList"],
+          "additionalProperties": false,
+          "properties": {
+            "tone": { "type": "string" },
+            "attributes": { "type": "array", "items": { "type": "string" } },
+            "doList": { "type": "array", "items": { "type": "string" } },
+            "dontList": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "messaging": {
+          "type": "object",
+          "required": ["elevatorPitch", "oneLiner", "boilerplateShort", "boilerplateLong"],
+          "additionalProperties": false,
+          "properties": {
+            "elevatorPitch": { "type": "string" },
+            "oneLiner": { "type": "string" },
+            "boilerplateShort": { "type": "string" },
+            "boilerplateLong": { "type": "string" }
+          }
+        },
+        "taglines": {
+          "type": "object",
+          "required": ["primary", "secondary", "engineering", "exhibition"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": { "type": "string" },
+            "secondary": { "type": "string" },
+            "engineering": { "type": "string" },
+            "exhibition": { "type": "string" }
+          }
+        },
+        "brandStory": { "type": "string" },
+        "usagePrinciples": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "founderIdentity": {
+      "type": "object",
+      "required": [
+        "name",
+        "engineeringIdentity",
+        "verifiedCredentials",
+        "technicalInterests",
+        "skills",
+        "roles",
+        "areasOfContribution",
+        "publicProfiles",
+        "attributionPreferences",
+        "presentationGuidelines"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "engineeringIdentity": { "type": "string" },
+        "verifiedCredentials": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "technicalInterests": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "skills": {
+          "type": "object",
+          "required": ["roboticsAndEmbedded", "aiAndWorldModels", "softwareAndWeb", "designAndMedia"],
+          "additionalProperties": false,
+          "properties": {
+            "roboticsAndEmbedded": { "type": "array", "items": { "type": "string" } },
+            "aiAndWorldModels": { "type": "array", "items": { "type": "string" } },
+            "softwareAndWeb": { "type": "array", "items": { "type": "string" } },
+            "designAndMedia": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "areasOfContribution": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "publicProfiles": {
+          "type": "object",
+          "required": ["github", "email"],
+          "additionalProperties": false,
+          "properties": {
+            "github": { "type": "string" },
+            "email": { "type": "string" },
+            "portfolio": { "type": "string" },
+            "socialX": { "type": "string" },
+            "instagram": { "type": "string" }
+          }
+        },
+        "attributionPreferences": {
+          "type": "object",
+          "required": ["individualCredit", "teamCredit", "disclaimerOnAssistance"],
+          "additionalProperties": false,
+          "properties": {
+            "individualCredit": { "type": "string" },
+            "teamCredit": { "type": "string" },
+            "disclaimerOnAssistance": { "type": "string" }
+          }
+        },
+        "presentationGuidelines": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "logoSystem": {
+      "type": "object",
+      "required": [
+        "primaryLogo",
+        "cloudSymbol",
+        "wordmark",
+        "iconOnly",
+        "variants",
+        "clearSpace",
+        "minimumSizes",
+        "placementGuidelines",
+        "backgroundRestrictions",
+        "misuseExamples",
+        "svgSpecifications",
+        "exportSpecifications"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primaryLogo": { "type": "string" },
+        "cloudSymbol": { "type": "string" },
+        "wordmark": { "type": "string" },
+        "iconOnly": { "type": "string" },
+        "variants": {
+          "type": "object",
+          "required": ["monochromeDark", "monochromeLight", "accentCyan", "outlineStroke"],
+          "additionalProperties": false,
+          "properties": {
+            "monochromeDark": { "type": "string" },
+            "monochromeLight": { "type": "string" },
+            "accentCyan": { "type": "string" },
+            "outlineStroke": { "type": "string" }
+          }
+        },
+        "clearSpace": {
+          "type": "object",
+          "required": ["formula", "minimumMarginPx", "diagramReference"],
+          "additionalProperties": false,
+          "properties": {
+            "formula": { "type": "string" },
+            "minimumMarginPx": { "type": "number" },
+            "diagramReference": { "type": "string" }
+          }
+        },
+        "minimumSizes": {
+          "type": "object",
+          "required": ["digitalPx", "printMm", "iconPx"],
+          "additionalProperties": false,
+          "properties": {
+            "digitalPx": { "type": "string" },
+            "printMm": { "type": "string" },
+            "iconPx": { "type": "string" }
+          }
+        },
+        "placementGuidelines": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "backgroundRestrictions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "misuseExamples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rule", "reason"],
+            "additionalProperties": false,
+            "properties": {
+              "rule": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        },
+        "svgSpecifications": {
+          "type": "object",
+          "required": ["viewBox", "precision", "strokeWidth", "responsive"],
+          "additionalProperties": false,
+          "properties": {
+            "viewBox": { "type": "string" },
+            "precision": { "type": "string" },
+            "strokeWidth": { "type": "string" },
+            "responsive": { "type": "boolean" }
+          }
+        },
+        "exportSpecifications": {
+          "type": "object",
+          "required": ["pngScales", "colorSpaces", "compression"],
+          "additionalProperties": false,
+          "properties": {
+            "pngScales": { "type": "array", "items": { "type": "string" } },
+            "colorSpaces": { "type": "array", "items": { "type": "string" } },
+            "compression": { "type": "string" }
+          }
+        }
+      }
+    },
+    "visualDesignSystem": {
+      "type": "object",
+      "required": [
+        "colors",
+        "typography",
+        "spacing",
+        "gridSystem",
+        "borderRadius",
+        "shadows",
+        "motionPrinciples",
+        "uiStyle",
+        "engineeringDiagramsStyle",
+        "presentationStyle",
+        "exhibitionDisplayStyle"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "type": "object",
+          "required": ["primary", "secondary", "accent", "neutral", "semantic"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": {
+              "type": "object",
+              "required": ["obsidianDark", "deepSpace"],
+              "additionalProperties": false,
+              "properties": {
+                "obsidianDark": { "type": "string" },
+                "deepSpace": { "type": "string" }
+              }
+            },
+            "secondary": {
+              "type": "object",
+              "required": ["aerospaceBlue", "slateGrid"],
+              "additionalProperties": false,
+              "properties": {
+                "aerospaceBlue": { "type": "string" },
+                "slateGrid": { "type": "string" }
+              }
+            },
+            "accent": {
+              "type": "object",
+              "required": ["electricCyan", "signalAmber", "hyperViolet"],
+              "additionalProperties": false,
+              "properties": {
+                "electricCyan": { "type": "string" },
+                "signalAmber": { "type": "string" },
+                "hyperViolet": { "type": "string" }
+              }
+            },
+            "neutral": {
+              "type": "object",
+              "required": ["cloudWhite", "alabasterCard", "charcoalMuted"],
+              "additionalProperties": false,
+              "properties": {
+                "cloudWhite": { "type": "string" },
+                "alabasterCard": { "type": "string" },
+                "charcoalMuted": { "type": "string" }
+              }
+            },
+            "semantic": {
+              "type": "object",
+              "required": ["success", "warning", "error", "info"],
+              "additionalProperties": false,
+              "properties": {
+                "success": { "type": "string" },
+                "warning": { "type": "string" },
+                "error": { "type": "string" },
+                "info": { "type": "string" }
+              }
+            }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "required": ["displayFont", "bodyFont", "monoFont", "scaleRatio", "hierarchy"],
+          "additionalProperties": false,
+          "properties": {
+            "displayFont": { "type": "string" },
+            "bodyFont": { "type": "string" },
+            "monoFont": { "type": "string" },
+            "scaleRatio": { "type": "string" },
+            "hierarchy": {
+              "type": "object",
+              "required": ["h1", "h2", "h3", "body", "caption", "codeSnippet"],
+              "additionalProperties": false,
+              "properties": {
+                "h1": { "type": "string" },
+                "h2": { "type": "string" },
+                "h3": { "type": "string" },
+                "body": { "type": "string" },
+                "caption": { "type": "string" },
+                "codeSnippet": { "type": "string" }
+              }
+            }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "required": ["baseUnitPx", "scale"],
+          "additionalProperties": false,
+          "properties": {
+            "baseUnitPx": { "type": "number" },
+            "scale": {
+              "type": "object",
+              "required": ["xs", "sm", "md", "lg", "xl", "2xl"],
+              "additionalProperties": false,
+              "properties": {
+                "xs": { "type": "string" },
+                "sm": { "type": "string" },
+                "md": { "type": "string" },
+                "lg": { "type": "string" },
+                "xl": { "type": "string" },
+                "2xl": { "type": "string" }
+              }
+            }
+          }
+        },
+        "gridSystem": {
+          "type": "object",
+          "required": ["columns", "gutter", "maxWidth"],
+          "additionalProperties": false,
+          "properties": {
+            "columns": { "type": "number" },
+            "gutter": { "type": "string" },
+            "maxWidth": { "type": "string" }
+          }
+        },
+        "borderRadius": {
+          "type": "object",
+          "required": ["card", "pill", "input", "modal"],
+          "additionalProperties": false,
+          "properties": {
+            "card": { "type": "string" },
+            "pill": { "type": "string" },
+            "input": { "type": "string" },
+            "modal": { "type": "string" }
+          }
+        },
+        "shadows": {
+          "type": "object",
+          "required": ["subtle", "elevation", "glowCyan"],
+          "additionalProperties": false,
+          "properties": {
+            "subtle": { "type": "string" },
+            "elevation": { "type": "string" },
+            "glowCyan": { "type": "string" }
+          }
+        },
+        "motionPrinciples": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "uiStyle": { "type": "string" },
+        "engineeringDiagramsStyle": { "type": "string" },
+        "presentationStyle": { "type": "string" },
+        "exhibitionDisplayStyle": { "type": "string" }
+      }
+    },
+    "projectEcosystem": {
+      "type": "object",
+      "required": ["contributionLevels", "projectSchemaDefinition", "verifiedProjects"],
+      "additionalProperties": false,
+      "properties": {
+        "contributionLevels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["level", "meaning", "appropriateUsage", "badgeFormula"],
+            "additionalProperties": false,
+            "properties": {
+              "level": {
+                "type": "string",
+                "enum": [
+                  "Created by",
+                  "Engineered by",
+                  "Co-engineered by",
+                  "Developed by",
+                  "Technical assistance by",
+                  "Powered by",
+                  "Designed by",
+                  "Collaborated with"
+                ]
+              },
+              "meaning": { "type": "string" },
+              "appropriateUsage": { "type": "string" },
+              "badgeFormula": { "type": "string" }
+            }
+          }
+        },
+        "projectSchemaDefinition": {
+          "type": "object",
+          "required": ["fields", "rules"],
+          "additionalProperties": false,
+          "properties": {
+            "fields": { "type": "array", "items": { "type": "string" } },
+            "rules": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "verifiedProjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/projectEntry"
+          }
+        }
+      }
+    },
+    "brandingAttributionSystem": {
+      "type": "object",
+      "required": [
+        "standardFormats",
+        "mediumRules",
+        "visualBadges"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "standardFormats": {
+          "type": "object",
+          "required": ["primary", "personal", "combined", "assistance"],
+          "additionalProperties": false,
+          "properties": {
+            "primary": { "type": "string" },
+            "personal": { "type": "string" },
+            "combined": { "type": "string" },
+            "assistance": { "type": "string" }
+          }
+        },
+        "mediumRules": {
+          "type": "object",
+          "required": [
+            "posterAttribution",
+            "exhibitionProjectAttribution",
+            "websiteFooterAttribution",
+            "presentationCredits",
+            "readmeCredits",
+            "videoCredits",
+            "technicalDocumentationCredits",
+            "githubProjectCredits",
+            "socialMediaCredits"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "posterAttribution": { "type": "string" },
+            "exhibitionProjectAttribution": { "type": "string" },
+            "websiteFooterAttribution": { "type": "string" },
+            "presentationCredits": { "type": "string" },
+            "readmeCredits": { "type": "string" },
+            "videoCredits": { "type": "string" },
+            "technicalDocumentationCredits": { "type": "string" },
+            "githubProjectCredits": { "type": "string" },
+            "socialMediaCredits": { "type": "string" }
+          }
+        },
+        "visualBadges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "markdownBadge", "htmlBadge", "svgPath"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "markdownBadge": { "type": "string" },
+              "htmlBadge": { "type": "string" },
+              "svgPath": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "termsAndConditions": {
+      "type": "object",
+      "required": [
+        "legalNotice",
+        "brandUsage",
+        "logoUsage",
+        "attributionRequirements",
+        "projectOwnership",
+        "contributorRecognition",
+        "intellectualProperty",
+        "thirdPartyAssets",
+        "openSourceLicenses",
+        "permissionToReuse",
+        "permissionToModify",
+        "commercialUsage",
+        "nonCommercialUsage",
+        "disclaimer",
+        "liabilityLimitations",
+        "collaborationAgreements",
+        "disputeHandling",
+        "termination",
+        "privacy",
+        "documentationAccuracy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "legalNotice": { "type": "string" },
+        "brandUsage": { "type": "string" },
+        "logoUsage": { "type": "string" },
+        "attributionRequirements": { "type": "string" },
+        "projectOwnership": { "type": "string" },
+        "contributorRecognition": { "type": "string" },
+        "intellectualProperty": { "type": "string" },
+        "thirdPartyAssets": { "type": "string" },
+        "openSourceLicenses": { "type": "string" },
+        "permissionToReuse": { "type": "string" },
+        "permissionToModify": { "type": "string" },
+        "commercialUsage": { "type": "string" },
+        "nonCommercialUsage": { "type": "string" },
+        "disclaimer": { "type": "string" },
+        "liabilityLimitations": { "type": "string" },
+        "collaborationAgreements": { "type": "string" },
+        "disputeHandling": { "type": "string" },
+        "termination": { "type": "string" },
+        "privacy": { "type": "string" },
+        "documentationAccuracy": { "type": "string" }
+      }
+    },
+    "brandGovernance": {
+      "type": "object",
+      "required": [
+        "administrator",
+        "approvalProcess",
+        "assetChangeManagement",
+        "versioningRules",
+        "complianceChecklist",
+        "exceptionHandling"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "administrator": { "type": "string" },
+        "approvalProcess": { "type": "string" },
+        "assetChangeManagement": { "type": "string" },
+        "versioningRules": { "type": "string" },
+        "complianceChecklist": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exceptionHandling": { "type": "string" }
+      }
+    },
+    "repositoryGovernance": {
+      "type": "object",
+      "required": [
+        "branchingStrategy",
+        "commitConventions",
+        "versioning",
+        "pullRequestGuidelines",
+        "issueManagement",
+        "changelogStandard",
+        "securityPolicy",
+        "documentationMaintenance"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "branchingStrategy": { "type": "string" },
+        "commitConventions": { "type": "string" },
+        "versioning": { "type": "string" },
+        "pullRequestGuidelines": { "type": "string" },
+        "issueManagement": { "type": "string" },
+        "changelogStandard": { "type": "string" },
+        "securityPolicy": { "type": "string" },
+        "documentationMaintenance": { "type": "string" }
+      }
+    },
+    "jsonValidation": {
+      "type": "object",
+      "required": [
+        "schemaReference",
+        "validationScript",
+        "requiredSectionsCount",
+        "integrityRules"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schemaReference": { "type": "string" },
+        "validationScript": { "type": "string" },
+        "requiredSectionsCount": { "type": "number" },
+        "integrityRules": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "projectEntry": {
+      "type": "object",
+      "required": [
+        "projectId",
+        "projectName",
+        "projectDescription",
+        "projectCategory",
+        "projectOwner",
+        "contributors",
+        "cl0udInvolvement",
+        "ojasSinghContribution",
+        "engineeringScope",
+        "technologyStack",
+        "repositoryUrl",
+        "documentationUrl",
+        "projectStatus",
+        "version",
+        "license",
+        "attributionRequirements",
+        "thirdPartyDependencies",
+        "mediaAssets",
+        "projectAcknowledgements"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "projectId": { "type": "string" },
+        "projectName": { "type": "string" },
+        "projectDescription": { "type": "string" },
+        "projectCategory": {
+          "type": "string",
+          "enum": [
+            "Autonomous Robotics & Mechatronics",
+            "Spatial Computing & 3D Web",
+            "World Models & AI Simulation",
+            "Embedded Systems & Firmware",
+            "AgriTech & Environmental IoT",
+            "Autonomous Service Robotics"
+          ]
+        },
+        "projectOwner": { "type": "string" },
+        "contributors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cl0udInvolvement": {
+          "type": "string",
+          "enum": [
+            "Created by",
+            "Engineered by",
+            "Co-engineered by",
+            "Developed by",
+            "Technical assistance by",
+            "Powered by",
+            "Designed by",
+            "Collaborated with"
+          ]
+        },
+        "ojasSinghContribution": { "type": "string" },
+        "engineeringScope": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "technologyStack": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "repositoryUrl": { "type": "string" },
+        "documentationUrl": { "type": "string" },
+        "projectStatus": {
+          "type": "string",
+          "enum": ["Active", "Completed", "In Development", "Archived", "Field Deployed"]
+        },
+        "version": { "type": "string" },
+        "license": { "type": "string" },
+        "attributionRequirements": { "type": "string" },
+        "thirdPartyDependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mediaAssets": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "projectAcknowledgements": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

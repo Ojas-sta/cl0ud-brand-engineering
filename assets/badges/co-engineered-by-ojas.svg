@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 28" width="220" height="28" fill="none">
+  <!-- GitHub Shield Style: Co-engineered by Ojas Singh -->
+  <clipPath id="clipOjas">
+    <rect width="220" height="28" rx="5"/>
+  </clipPath>
+  <g clip-path="url(#clipOjas)">
+    <rect width="124" height="28" fill="#0B0F19"/>
+    <rect x="124" width="96" height="28" fill="#1E3A8A"/>
+    
+    <!-- Left label -->
+    <text x="10" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94A3B8" letter-spacing="0.02em">CO-ENGINEERED BY</text>
+    
+    <!-- Right label -->
+    <text x="133" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#F8FAFC" letter-spacing="0.02em">OJAS SINGH</text>
+  </g>
+  <rect width="220" height="28" rx="5" stroke="#334155" stroke-opacity="0.6" fill="none"/>
+</svg>

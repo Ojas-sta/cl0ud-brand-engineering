@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <rect width="32" height="32" rx="7" fill="#0B0F19"/>
+  <!-- Simplified Icon for 32x32 Favicon Crispness -->
+  <path d="M 20 8 A 6 6 0 0 1 26 14 A 5 5 0 0 1 28 19 A 4 4 0 0 1 24 25 L 8 25 A 5 5 0 0 1 5 15 A 6 6 0 0 1 12 10 A 7 7 0 0 1 20 8 Z" 
+        stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="16" cy="18" rx="3.5" ry="4.5" stroke="#00E5FF" stroke-width="1.8"/>
+  <line x1="14" y1="21" x2="18" y2="15" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

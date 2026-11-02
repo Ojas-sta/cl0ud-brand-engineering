@@ -1,0 +1,656 @@
+{
+  "$schema": "./schemas/cl0ud-brand-spec.schema.json",
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-02",
+  "brandIdentity": {
+    "name": "cl0ud",
+    "stylizedName": "cl0ud",
+    "pronunciation": "/klaʊd/ (cloud)",
+    "variants": {
+      "primary": "cl0ud",
+      "uppercase": "CL0UD",
+      "wordmark": "cl0ud.engineering",
+      "developerHandle": "cl0ud-eng"
+    },
+    "positioning": "Autonomous cyber-physical systems architecture, high-fidelity creative engineering, and pragmatic open-source robotics documentation.",
+    "purpose": "To bridge the gap between high-level autonomous intelligence and tangible physical machines through rigorous systems engineering, transparent attribution, and open architectural standards.",
+    "mission": "Deliver reproducible, robust, and beautifully documented engineering systems—spanning quadruped robotics, world-model simulations, IoT automation, and spatial web platforms—while empowering student and peer engineering teams through modular technical assistance.",
+    "vision": "A global open ecosystem where complex hardware, autonomous agents, and mechatronics are documented with industrial clarity, attributed with integrity, and built with craftsmanship.",
+    "personality": [
+      "Rigorous and Deterministic",
+      "Architecturally Lucid",
+      "Minimalist and Contemporary",
+      "Pragmatic Hardware Craftsman",
+      "Generous and Collaborative"
+    ],
+    "values": [
+      {
+        "principle": "Zero Turnkey Slop",
+        "description": "Reject superficial wrappers and fragile consumer demonstrations in favor of authentic low-level mechatronics, custom fabrication, and verified system drivers."
+      },
+      {
+        "principle": "Uncompromising Attribution",
+        "description": "Never claim ownership of peer, team, or institutional intellectual property. Attribute every line of code, CAD geometry, and circuit layout with precision."
+      },
+      {
+        "principle": "Hardware-First Determinism",
+        "description": "AI models must ground in physical reality with fail-safe hardware limits, isolated electrical domains, and predictable kinematic boundaries."
+      },
+      {
+        "principle": "Documentation as Architecture",
+        "description": "Every system must be accompanied by comprehensive monographs, register maps, electrical schematics, and interactive visual aids."
+      }
+    ],
+    "voice": {
+      "tone": "Authoritative, technical, clear, and unpretentious",
+      "attributes": ["Precise", "Analytical", "Inspiring", "Accessible to technical peers"],
+      "doList": [
+        "Explain the physics, kinematics, and protocols under the hood.",
+        "Credit institutional partners, open-source maintainers, and teammates prominently.",
+        "Use concrete SI units (N·m, m/s, AWG, mm, ms, Hz).",
+        "Distinguish verified hardware implementations from simulations and theoretical concepts."
+      ],
+      "dontList": [
+        "Do not use generic buzzwords or hollow marketing hyperbole.",
+        "Do not obscure collaborator or school team contributions.",
+        "Do not present unbuilt software as fully deployed physical systems.",
+        "Do not misspell cl0ud as Cloud or CLOUD unless referencing a specific project designation (e.g., Project CLOUD)."
+      ]
+    },
+    "messaging": {
+      "elevatorPitch": "cl0ud is an engineering lab and brand architecture ecosystem founded by Ojas Singh, developing autonomous robotics, world-model simulators, and cyber-physical IoT systems with cinema-grade documentation and ethical peer attribution.",
+      "oneLiner": "Autonomous cyber-physical systems engineered with precision and documented with clarity.",
+      "boilerplateShort": "cl0ud represents the engineering initiatives, robotics platforms, and open-source systems architecture developed and co-engineered by Ojas Singh.",
+      "boilerplateLong": "cl0ud is an engineering brand, research lab, and systems architecture ecosystem founded by Ojas Singh. Spanning quadruped robotics, spatial computing, robotic arm world models, and environmental automation, cl0ud provides open-source firmware, custom mechatronics fabrication, and standardized attribution frameworks for peer and institutional engineering teams."
+    },
+    "taglines": {
+      "primary": "Engineered with Precision. Attributed with Integrity.",
+      "secondary": "From Latent Embeddings to Physical Kinematics.",
+      "engineering": "Autonomous Systems Architecture & Open Mechatronics.",
+      "exhibition": "Powered by cl0ud | Engineered for Impact."
+    },
+    "brandStory": "cl0ud emerged from late-night prototyping benches, soldering irons, and terminal sessions at DPS Indirapuram. What began as an ambition to transcend turnkey consumer robotics evolved into an engineering standard: that every robotic platform—from the Unitree Go2 quadruped patrol steward to mobile tracking systems and automated hydroponics—deserves aerospace-grade electrical isolation, reproducible firmware, and crystal-clear attribution.",
+    "usagePrinciples": [
+      "The zero '0' in cl0ud signifies binary determinism, clean resets, and computational grounding.",
+      "cl0ud must always be paired with the appropriate attribution level when appearing on collaborative or school exhibition projects.",
+      "cl0ud may never be used to imply unilateral ownership over collaborative work."
+    ]
+  },
+  "founderIdentity": {
+    "name": "Ojas Singh",
+    "engineeringIdentity": "Lead Systems Architect, Robotics Engineer & Cyber-Physical Systems Builder",
+    "verifiedCredentials": [
+      "Lead Mechatronics & Systems Architect for Project CLOUD (Unitree Go2 Edu Quadruped Docent & Makerspace Steward)",
+      "Creator of WorldXD JEPA-WMS Apple Silicon Robotic Arm Simulator",
+      "Lead 3D Developer & Architect for DPSI Tech & Innovation Exhibition 3D Web Application",
+      "Lead Firmware Architect for DPSI TinkerTek Open-Source Robotics Platform (Arduino Uno R4 / ROS)",
+      "Technical Contributor & Advisor for Autonomous Mobile Smart Dustbin and Automated Hydroponics Projects"
+    ],
+    "technicalInterests": [
+      "Autonomous Mobile Robotics (AMR) & Quadruped Locomotion",
+      "Joint Embedding Predictive Architecture (JEPA) & World Models",
+      "Sensor Fusion (RealSense Stereo Depth, 4D LiDAR, IMU EKF)",
+      "Spatial Computing, Computer Vision & Gesture Recognition",
+      "Isolated Multi-Rail Power Distribution & Rapid Mechatronics Prototyping",
+      "Full-Stack 3D Web Systems (React Three Fiber, WebGL, Next.js)"
+    ],
+    "skills": {
+      "roboticsAndEmbedded": [
+        "Unitree Go2 SDK & CycloneDDS",
+        "ROS 2 Humble / Micro-ROS",
+        "Arduino Uno R4 WiFi / ESP32 / M5Stack",
+        "CAD (Onshape / Fusion 360) & FDM 3D Printing",
+        "Isolated DC Power Distribution, Step-Down Buck Regulation, EMI Suppression",
+        "I2C Register Mapping & UART Serial Telemetry"
+      ],
+      "aiAndWorldModels": [
+        "Meta JEPA / V-JEPA Architecture",
+        "PyTorch (MPS / Metal Performance Shaders on Apple Silicon)",
+        "OpenCV & ArUco / AprilTag Optical Tracking",
+        "Whisper Speech Recognition & Local Piper TTS",
+        "Ollama Local LLM Orchestration & RAG Knowledge Retrieval"
+      ],
+      "softwareAndWeb": [
+        "TypeScript / JavaScript (ES6+)",
+        "Next.js App Router, React 19, Zustand",
+        "Three.js & React Three Fiber (R3F)",
+        "Python 3.11+, C++, AssemblyScript",
+        "Cloudflare Workers & Pages, GitHub Actions CI/CD"
+      ],
+      "designAndMedia": [
+        "Keynote Cinema-Grade Technical Presentations",
+        "Photorealistic PBR 3D Architectural Lighting",
+        "Technical Monograph & Schematic Layout",
+        "Vector Brand Architecture & SVG Design"
+      ]
+    },
+    "roles": [
+      "Founder & Systems Architect, cl0ud",
+      "Lead Roboticist, DPSI Student Robotics Team",
+      "Technical Mentor & System Contributor for School Innovation Projects"
+    ],
+    "areasOfContribution": [
+      "Kinematic modeling and quadruped mission programming",
+      "Custom mechatronic caddy and vibration-dampened guide rail mounting",
+      "Isolated power distribution electronics and harness design",
+      "3D spatial web architecture and anti-cheat voting mechanisms",
+      "Motor driver tuning, computer vision tracking, and IoT sensor telemetry"
+    ],
+    "publicProfiles": {
+      "github": "https://github.com/Ojas-sta",
+      "email": "ojasctc@gmail.com",
+      "portfolio": "https://ojas-sta.github.io/Cloud_DPSI-EXPO26/",
+      "socialX": "https://x.com/mewing_minister",
+      "instagram": "https://instagram.com/ojasdarealgoat"
+    },
+    "attributionPreferences": {
+      "individualCredit": "Co-engineered by Ojas Singh",
+      "teamCredit": "Engineered by DPSI Student Robotics Team | Systems Architecture powered by cl0ud | Co-engineered by Ojas Singh",
+      "disclaimerOnAssistance": "Technical assistance and systems architecture provided by Ojas Singh under the cl0ud engineering banner; core domain execution by project authors."
+    },
+    "presentationGuidelines": [
+      "Always introduce Ojas Singh as a collaborator and systems engineer alongside institutional project teams.",
+      "Highlight verifiable engineering deliverables: code commits, wiring schematics, CAD models, and test logs.",
+      "Avoid corporate titles; prefer 'Lead Systems Architect' or 'Robotics Engineer'."
+    ]
+  },
+  "logoSystem": {
+    "primaryLogo": "assets/logos/cl0ud-primary.svg",
+    "cloudSymbol": "assets/logos/cl0ud-icon.svg",
+    "wordmark": "assets/logos/cl0ud-wordmark.svg",
+    "iconOnly": "assets/logos/cl0ud-icon.svg",
+    "variants": {
+      "monochromeDark": "assets/logos/cl0ud-monochrome-dark.svg",
+      "monochromeLight": "assets/logos/cl0ud-monochrome-light.svg",
+      "accentCyan": "assets/logos/cl0ud-primary.svg",
+      "outlineStroke": "assets/logos/cl0ud-outline.svg"
+    },
+    "clearSpace": {
+      "formula": "X = height of the 'c' in cl0ud; clear space on all 4 sides must equal or exceed 1.0X",
+      "minimumMarginPx": 24,
+      "diagramReference": "brand/logo/logo-specifications.md#clear-space"
+    },
+    "minimumSizes": {
+      "digitalPx": "32px height for wordmark; 20px height for standalone cloud symbol",
+      "printMm": "12mm height for wordmark; 8mm height for standalone symbol",
+      "iconPx": "16x16px for favicons with optical stroke enhancement"
+    },
+    "placementGuidelines": [
+      "In collaborative posters, place the cl0ud badge in the bottom technical credits plinth alongside institutional logos.",
+      "In code repositories, place the 'Powered by cl0ud' badge in the top README badge ribbon.",
+      "Maintain high contrast against dark (#0B0F19) or light (#F8FAFC) backgrounds; never place on unmasked vibrant photographs."
+    ],
+    "backgroundRestrictions": [
+      "Do not render the electric cyan logo on low-contrast bright blue or neon green backgrounds.",
+      "Do not apply drop shadows with excessive blur that softens the geometric lines.",
+      "Do not place the logo inside complex photographic textures without a solid or frosted backing shield."
+    ],
+    "misuseExamples": [
+      {
+        "rule": "Do not distort aspect ratio",
+        "reason": "Altering vertical or horizontal scaling distorts the custom geometric 0 glyph."
+      },
+      {
+        "rule": "Do not substitute standard 'o' for zero '0'",
+        "reason": "The zero with an internal discrete spark/slash is the proprietary hallmark of cl0ud."
+      },
+      {
+        "rule": "Do not enclose within arbitrary decorative frames",
+        "reason": "Dilutes the modern architectural clarity of the brand mark."
+      },
+      {
+        "rule": "Do not recolor using unauthorized gradients",
+        "reason": "Only authorized Electric Cyan (#00E5FF) and monochrome tones are permitted."
+      }
+    ],
+    "svgSpecifications": {
+      "viewBox": "0 0 240 60 for wordmark; 0 0 64 64 for icon",
+      "precision": "2 decimal places, cleaned SVG paths with no raster artifacts",
+      "strokeWidth": "2.5px standard vector stroke with round joins",
+      "responsive": true
+    },
+    "exportSpecifications": {
+      "pngScales": ["1x", "2x", "4x"],
+      "colorSpaces": ["sRGB", "Display P3"],
+      "compression": "Lossless PNG with transparency optimization"
+    }
+  },
+  "visualDesignSystem": {
+    "colors": {
+      "primary": {
+        "obsidianDark": "#0B0F19",
+        "deepSpace": "#030712"
+      },
+      "secondary": {
+        "aerospaceBlue": "#1E3A8A",
+        "slateGrid": "#334155"
+      },
+      "accent": {
+        "electricCyan": "#00E5FF",
+        "signalAmber": "#F59E0B",
+        "hyperViolet": "#8B5CF6"
+      },
+      "neutral": {
+        "cloudWhite": "#F8FAFC",
+        "alabasterCard": "#0F172A",
+        "charcoalMuted": "#94A3B8"
+      },
+      "semantic": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#00E5FF"
+      }
+    },
+    "typography": {
+      "displayFont": "Outfit, system-ui, sans-serif",
+      "bodyFont": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+      "monoFont": "JetBrains Mono, SF Mono, Menlo, monospace",
+      "scaleRatio": "1.250 (Major Third)",
+      "hierarchy": {
+        "h1": "2.441rem (39px) / line-height: 1.2 / font-weight: 700 / letter-spacing: -0.02em",
+        "h2": "1.953rem (31px) / line-height: 1.3 / font-weight: 600 / letter-spacing: -0.015em",
+        "h3": "1.563rem (25px) / line-height: 1.4 / font-weight: 600 / letter-spacing: -0.01em",
+        "body": "1.000rem (16px) / line-height: 1.6 / font-weight: 400 / letter-spacing: 0em",
+        "caption": "0.800rem (12.8px) / line-height: 1.5 / font-weight: 500 / letter-spacing: 0.02em",
+        "codeSnippet": "0.875rem (14px) / line-height: 1.7 / font-family: JetBrains Mono / font-weight: 400"
+      }
+    },
+    "spacing": {
+      "baseUnitPx": 8,
+      "scale": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px",
+        "2xl": "48px"
+      }
+    },
+    "gridSystem": {
+      "columns": 12,
+      "gutter": "24px",
+      "maxWidth": "1280px"
+    },
+    "borderRadius": {
+      "card": "12px",
+      "pill": "9999px",
+      "input": "8px",
+      "modal": "16px"
+    },
+    "shadows": {
+      "subtle": "0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4)",
+      "elevation": "0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6)",
+      "glowCyan": "0 0 24px -4px rgba(0, 229, 255, 0.35)"
+    },
+    "motionPrinciples": [
+      "Kinematic Accuracy: Motion transitions should feel physically grounded with smooth ease-out curves (cubic-bezier(0.16, 1, 0.3, 1)).",
+      "Subtle Luminescence: Interactive cards pulse gently with a 0.3s transition on hover.",
+      "Zero Jank: All animations must maintain 60-120 FPS by avoiding un-composited properties."
+    ],
+    "uiStyle": "High-contrast dark architectural aesthetic with semi-transparent frosted cards (backdrop-filter: blur(12px)), hairline slate borders (border: 1px solid rgba(255,255,255,0.08)), and electric cyan accent highlights.",
+    "engineeringDiagramsStyle": "Clean SVG and Mermaid flowcharts using dark obsidian containers, aerospace blue flow paths, and electric cyan decision nodes with monospace register labels.",
+    "presentationStyle": "Apple Keynote-inspired widescreen (16:9) cinematic layouts, dark space backgrounds, full-bleed hardware photography, and bold, readable typography.",
+    "exhibitionDisplayStyle": "Physical plinth and poster design using brushed titanium borders, high-contrast matte black backgrounds, white bold captions, and luminous cyan attribution badges."
+  },
+  "projectEcosystem": {
+    "contributionLevels": [
+      {
+        "level": "Created by",
+        "meaning": "Sole authorship, original conception, and primary implementation under the cl0ud banner.",
+        "appropriateUsage": "Use for proprietary internal libraries, personal research prototypes, and original architectures authored entirely by Ojas Singh / cl0ud.",
+        "badgeFormula": "Created by cl0ud"
+      },
+      {
+        "level": "Engineered by",
+        "meaning": "Full ownership and execution of core engineering, software architecture, and mechatronic design.",
+        "appropriateUsage": "Use when cl0ud leads the entire technical delivery for a designated standalone system.",
+        "badgeFormula": "Engineered by cl0ud"
+      },
+      {
+        "level": "Co-engineered by",
+        "meaning": "Shared technical delivery in close collaboration with external developers, student teams, or institutions.",
+        "appropriateUsage": "Use when Ojas Singh / cl0ud works alongside equal engineering partners on system sub-modules.",
+        "badgeFormula": "Co-engineered by Ojas Singh"
+      },
+      {
+        "level": "Developed by",
+        "meaning": "Direct hands-on software coding, firmware flashing, or web development contribution.",
+        "appropriateUsage": "Use when the primary contribution is software development within an existing team project.",
+        "badgeFormula": "Developed by cl0ud"
+      },
+      {
+        "level": "Technical assistance by",
+        "meaning": "Advisory support, sensor integration guidance, code review, debugging, or simulation testing.",
+        "appropriateUsage": "Use when cl0ud assists an independent student or school team without claiming core project authorship (e.g., smart dustbin tracking or hydroponics telemetry).",
+        "badgeFormula": "Technical assistance by cl0ud"
+      },
+      {
+        "level": "Powered by",
+        "meaning": "The system utilizes cl0ud runtime libraries, API bridges, UI frameworks, or hardware blueprints.",
+        "appropriateUsage": "Use when an external project incorporates cl0ud modules, styles, or communication layers.",
+        "badgeFormula": "Powered by cl0ud"
+      },
+      {
+        "level": "Designed by",
+        "meaning": "Responsible for the visual identity, 3D exhibition styling, or CAD exterior enclosure design.",
+        "appropriateUsage": "Use when contribution is primarily industrial, UI/UX, or exhibition design.",
+        "badgeFormula": "Designed by cl0ud"
+      },
+      {
+        "level": "Collaborated with",
+        "meaning": "Equal institutional or departmental partnership with a school, makerspace, or research lab.",
+        "appropriateUsage": "Use to credit host institutions such as DPS Indirapuram or partner engineering clubs.",
+        "badgeFormula": "Collaborated with [Partner]"
+      }
+    ],
+    "projectSchemaDefinition": {
+      "fields": [
+        "projectId",
+        "projectName",
+        "projectDescription",
+        "projectCategory",
+        "projectOwner",
+        "contributors",
+        "cl0udInvolvement",
+        "ojasSinghContribution",
+        "engineeringScope",
+        "technologyStack",
+        "repositoryUrl",
+        "documentationUrl",
+        "projectStatus",
+        "version",
+        "license",
+        "attributionRequirements",
+        "thirdPartyDependencies",
+        "mediaAssets",
+        "projectAcknowledgements"
+      ],
+      "rules": [
+        "Project ID must follow the PRJ-XXX sequential format.",
+        "All third-party open-source components must be explicitly listed in dependencies.",
+        "Never list cl0ud as Project Owner unless the project is 100% created and owned by cl0ud.",
+        "Institutional collaborations must name the partner organization in acknowledgements."
+      ]
+    },
+    "verifiedProjects": [
+      {
+        "projectId": "PRJ-001",
+        "projectName": "Project CLOUD: Autonomous Quadruped Docent & Makerspace Utility Steward",
+        "projectDescription": "Autonomous cyber-physical robotic platform based on the Unitree Go2 Edu quadruped, operating dual cognitive identities: ARGUS for makerspace AprilTag tool verification and liquid hazard classification, and THE DOCENT for conversational VIP exhibition tours.",
+        "projectCategory": "Autonomous Robotics & Mechatronics",
+        "projectOwner": "DPSI Student Robotics Team & DPS Indirapuram",
+        "contributors": ["Ojas Singh (Lead Systems Architect)", "DPSI Student Robotics Team", "Laboratory Faculty Mentors"],
+        "cl0udInvolvement": "Powered by",
+        "ojasSinghContribution": "Lead systems architecture, back-load guide rail structural CAD integration, 3D printed dual-bay utility caddy, isolated multi-rail step-down electrical topology, and conversational RAG narration engine.",
+        "engineeringScope": [
+          "12-DOF Unitree Go2 active joint kinematics integration",
+          "Back-load guide rail mounting with silicone vibration isolation",
+          "Isolated step-down DC electrical distribution (24V -> 12V/5V) with back-EMF suppression",
+          "Intel RealSense D435i optical baseline calibration & 4D ultra-wide LiDAR navigation",
+          "Dual persona cognitive state machine (ARGUS utility mode & Docent exhibition mode)"
+        ],
+        "technologyStack": ["ROS 2 Humble", "Unitree Go2 SDK", "Intel RealSense SDK", "Python 3.11", "C++", "Whisper", "Piper TTS", "Ollama", "Onshape CAD"],
+        "repositoryUrl": "https://github.com/Ojas-sta/Cloud_DPSI-EXPO26",
+        "documentationUrl": "https://github.com/Ojas-sta/Cloud_DPSI-EXPO26/blob/main/PROJECT.md",
+        "projectStatus": "Field Deployed",
+        "version": "5.0.0",
+        "license": "Custom Academic & Institutional License (DPSI / Open Source Monograph)",
+        "attributionRequirements": "Mandatory credit: 'Engineered by DPSI Student Robotics Team | Systems Architecture powered by cl0ud | Co-engineered by Ojas Singh'",
+        "thirdPartyDependencies": ["Unitree Robotics Go2 Firmware", "Intel RealSense SDK 2.0", "ROS 2 Humble Hawksbill", "OpenCV 4.x"],
+        "mediaAssets": ["screenshots/slide_0.png", "screenshots/slide_1.png", "screenshots/slide_2.png"],
+        "projectAcknowledgements": ["DPS Indirapuram Administration", "Makerspace Laboratory Safety Officers", "Unitree Robotics Open Source Community"]
+      },
+      {
+        "projectId": "PRJ-002",
+        "projectName": "DPSI Tech & Innovation Exhibition 3D Virtual Floor Plan & Live Anti-Cheat Voting System",
+        "projectDescription": "Photorealistic architectural 3D virtual floor plan and live exhibition voting web platform with a 4-layer anti-cheat security mechanism and fuzzy search across 35 project booths.",
+        "projectCategory": "Spatial Computing & 3D Web",
+        "projectOwner": "DPS Indirapuram (DPSI)",
+        "contributors": ["Ojas Singh (Lead Web Architect & 3D Developer)", "DPSI Exhibition Organizing Committee"],
+        "cl0udInvolvement": "Powered by",
+        "ojasSinghContribution": "Full-stack 3D scene architecture, PBR architectural material tuning (Carrara white floor, titanium plinths), Three.js camera rigs, Zustand state management, and 4-tier anti-cheat voting verification.",
+        "engineeringScope": [
+          "React Three Fiber (R3F) 3D architectural floor plan rendering",
+          "PBR materials, soft contact shadows, and celestial skybox tuning",
+          "4-layer anti-cheat voting engine (fingerprinting, IP rate-limiting, honeypots, session validation)",
+          "Automated GitHub Actions CI/CD to Cloudflare Pages"
+        ],
+        "technologyStack": ["Next.js (App Router)", "TypeScript", "Three.js", "React Three Fiber (R3F)", "Zustand", "Framer Motion", "Cloudflare Pages"],
+        "repositoryUrl": "https://github.com/Ojas-sta/dpsi-exhibition",
+        "documentationUrl": "https://dpsiexibition.pages.dev",
+        "projectStatus": "Active",
+        "version": "1.0.0",
+        "license": "MIT License (Web Core) & DPSI Institutional Assets",
+        "attributionRequirements": "Mandatory credit: 'Powered by cl0ud | Co-engineered by Ojas Singh'",
+        "thirdPartyDependencies": ["three", "@react-three/fiber", "@react-three/drei", "framer-motion", "zustand"],
+        "mediaAssets": ["public/textures/milkyway_smooth.jpg"],
+        "projectAcknowledgements": ["DPS Indirapuram Exhibition Committee", "Cloudflare Pages", "Three.js community"]
+      },
+      {
+        "projectId": "PRJ-003",
+        "projectName": "WorldXD: JEPA-WMS Real-Time Robotic Arm Simulation Platform",
+        "projectDescription": "Advanced robotic arm simulation engine powered by Meta's Joint Embedding Predictive Architecture for World Models in Simulation (JEPA-WMS), optimized natively for Apple Silicon (MPS backend) to couple visual planning in latent feature space with low-level analytical inverse kinematics.",
+        "projectCategory": "World Models & AI Simulation",
+        "projectOwner": "cl0ud (Ojas Singh)",
+        "contributors": ["Ojas Singh (Creator & Author)"],
+        "cl0udInvolvement": "Created by",
+        "ojasSinghContribution": "Conception, mathematical formulation of feature-space loss, PyTorch MPS hardware acceleration pipeline, and analytical 6-DOF inverse kinematics solver.",
+        "engineeringScope": [
+          "JEPA latent representation training for robotic arm path predictions",
+          "Metal Performance Shaders (MPS) memory-mapped execution on Apple Silicon",
+          "Analytical closed-form Inverse Kinematics (IK) and Jacobian matrix solver",
+          "Real-time visual rendering of trajectory envelopes"
+        ],
+        "technologyStack": ["Python 3.11", "PyTorch (MPS)", "Meta JEPA / V-JEPA", "NumPy", "SciPy", "Matplotlib"],
+        "repositoryUrl": "https://github.com/Ojas-sta/WorldXD",
+        "documentationUrl": "https://github.com/Ojas-sta/WorldXD#readme",
+        "projectStatus": "Active",
+        "version": "0.4.0",
+        "license": "MIT License",
+        "attributionRequirements": "Standard credit: 'Created by cl0ud | Engineered by Ojas Singh'",
+        "thirdPartyDependencies": ["torch", "torchvision", "numpy", "scipy"],
+        "mediaAssets": [],
+        "projectAcknowledgements": ["Meta AI Research (JEPA team)", "Apple Machine Learning Research"]
+      },
+      {
+        "projectId": "PRJ-004",
+        "projectName": "DPSI TinkerTek Open-Source Firmware & Agentic OS",
+        "projectDescription": "Open-source drivers, firmware, I2C register maps, and Agentic OS runtime for School For Schools (s4s) ICRobot, ICBricks, and Arduino Uno R4 WiFi.",
+        "projectCategory": "Embedded Systems & Firmware",
+        "projectOwner": "DPSI & Ojas Singh",
+        "contributors": ["Ojas Singh (Lead Firmware Architect)", "School For Schools (s4s) Engineering"],
+        "cl0udInvolvement": "Co-engineered by",
+        "ojasSinghContribution": "Authoring I2C register map specifications, C++ microcontroller driver libraries, and modular Arduino Uno R4 WiFi communication bridge.",
+        "engineeringScope": [
+          "Hardware I2C slave register protocol design",
+          "Arduino Uno R4 Renesas RA4M1 bare-metal register interaction",
+          "ESP32-S3 wireless bridge telemetry for remote motor and sensor actuation",
+          "Comprehensive developer register documentation"
+        ],
+        "technologyStack": ["C++", "Arduino C", "Renesas RA4M1 Toolchain", "I2C Protocol", "Git"],
+        "repositoryUrl": "https://github.com/Ojas-sta/DPSI_TinkerTek",
+        "documentationUrl": "https://github.com/Ojas-sta/DPSI_TinkerTek#readme",
+        "projectStatus": "Active",
+        "version": "1.2.0",
+        "license": "Apache 2.0 License",
+        "attributionRequirements": "Mandatory credit: 'Co-engineered by Ojas Singh | cl0ud Open Firmware'",
+        "thirdPartyDependencies": ["Arduino Core for Renesas RA4M1", "Wire Library"],
+        "mediaAssets": [],
+        "projectAcknowledgements": ["School For Schools (s4s) Initiative", "DPS Indirapuram Innovation Lab"]
+      },
+      {
+        "projectId": "PRJ-005",
+        "projectName": "Autonomous Mobile Smart Dustbin with Target Tracking",
+        "projectDescription": "Smart robotic mobility base engineered to autonomously navigate indoor spaces, track human users or waste targets via computer vision, and maneuver dynamically to provide hands-free disposal access.",
+        "projectCategory": "Autonomous Service Robotics",
+        "projectOwner": "Student Innovation Collaboration Project",
+        "contributors": ["Student Project Team (Core Mechanics & Enclosure)", "Ojas Singh (Autonomous Navigation & Vision Tracking Advisor)"],
+        "cl0udInvolvement": "Technical assistance by",
+        "ojasSinghContribution": "Architectural guidance on differential drive kinematic control, optical target tracking with OpenCV, ultrasonic obstacle avoidance filtering, and power bus stability.",
+        "engineeringScope": [
+          "Target detection and centroid tracking algorithms via optical feed",
+          "Closed-loop PID motor velocity control for differential drive base",
+          "Sensor fusion with multi-directional ultrasonic distance sensors",
+          "Electrical safety and battery voltage regulation"
+        ],
+        "technologyStack": ["Python", "OpenCV", "Raspberry Pi / ESP32", "L298N / TB6612FNG Motor Drivers", "Ultrasonic Arrays"],
+        "repositoryUrl": "https://github.com/Ojas-sta/autonomous-smart-dustbin",
+        "documentationUrl": "documentation/engineering-portfolio.md#prj-005",
+        "projectStatus": "In Development",
+        "version": "0.8.0",
+        "license": "MIT License (Open Hardware/Software Collaboration)",
+        "attributionRequirements": "Credit block: 'Project by Student Engineering Team | Technical Assistance by cl0ud & Ojas Singh'",
+        "thirdPartyDependencies": ["opencv-python", "numpy", "RPi.GPIO"],
+        "mediaAssets": [],
+        "projectAcknowledgements": ["School Innovation Exhibition Panel", "Peer Hardware Collaborators"]
+      },
+      {
+        "projectId": "PRJ-006",
+        "projectName": "Automated Hydroponic Farming Environmental IoT System",
+        "projectDescription": "Precision agricultural IoT monitoring and automation station maintaining optimal nutrient pH, electrical conductivity (EC), ambient light cycles, and automated reservoir replenishment for indoor soilless cultivation.",
+        "projectCategory": "AgriTech & Environmental IoT",
+        "projectOwner": "Student Agriculture & Sustainability Initiative",
+        "contributors": ["Hydroponics Research Team (Plant Biology & Bed Fabrication)", "Ojas Singh (IoT Telemetry & Automation Advisor)"],
+        "cl0udInvolvement": "Technical assistance by",
+        "ojasSinghContribution": "Sensor calibration algorithms for analog pH and EC probes, MQTT telemetry reporting dashboard, peristaltic pump automated dosing logic, and safe 12V relay switching.",
+        "engineeringScope": [
+          "Analog probe noise filtering and multi-point calibration math",
+          "Automated dosing algorithm for pH Up/Down and nutrient solution A/B",
+          "Real-time MQTT telemetry push to local dashboard and mobile alerts",
+          "Submersible pump dry-run protection and water level float switches"
+        ],
+        "technologyStack": ["C++", "ESP32", "MQTT / WebSockets", "Node-RED", "Peristaltic Dosing Pumps", "Analog Sensor ADC"],
+        "repositoryUrl": "https://github.com/Ojas-sta/hydroponic-iot-telemetry",
+        "documentationUrl": "documentation/engineering-portfolio.md#prj-006",
+        "projectStatus": "In Development",
+        "version": "0.9.0",
+        "license": "CERN Open Hardware Licence v2 / MIT Code",
+        "attributionRequirements": "Credit block: 'Project by Hydroponics Sustainability Team | Technical Assistance by cl0ud & Ojas Singh'",
+        "thirdPartyDependencies": ["PubSubClient", "DallasTemperature", "OneWire"],
+        "mediaAssets": [],
+        "projectAcknowledgements": ["DPSI Biology & Environmental Sciences Department", "Peer Agricultural Builders"]
+      },
+      {
+        "projectId": "PRJ-007",
+        "projectName": "Spatial-OS & Vision-Track: Web-Based Spatial Computing Environment",
+        "projectDescription": "Web-native spatial computing experiment recreating Apple Vision Pro hand tracking and gesture interactions inside standard modern web browsers using MediaPipe and WebGL.",
+        "projectCategory": "Spatial Computing & 3D Web",
+        "projectOwner": "cl0ud (Ojas Singh)",
+        "contributors": ["Ojas Singh (Creator & Author)"],
+        "cl0udInvolvement": "Created by",
+        "ojasSinghContribution": "Pinch-to-interact gesture smoothing, 3D hand landmark depth projection, and zero-dependency web canvas renderer.",
+        "engineeringScope": [
+          "21-point 3D hand landmark estimation via MediaPipe",
+          "Index-thumb pinch threshold detection with hysteresis filtering",
+          "Interactive floating UI windows with spatial parallax"
+        ],
+        "technologyStack": ["JavaScript (ES6)", "MediaPipe Hands", "HTML5 Canvas", "CSS3 3D Transforms"],
+        "repositoryUrl": "https://github.com/Ojas-sta/Spatial-OS",
+        "documentationUrl": "https://github.com/Ojas-sta/Spatial-OS#readme",
+        "projectStatus": "Active",
+        "version": "1.0.0",
+        "license": "MIT License",
+        "attributionRequirements": "Standard credit: 'Created by cl0ud | Engineered by Ojas Singh'",
+        "thirdPartyDependencies": ["@mediapipe/camera_utils", "@mediapipe/hands"],
+        "mediaAssets": [],
+        "projectAcknowledgements": ["Google MediaPipe Research Team"]
+      }
+    ]
+  },
+  "brandingAttributionSystem": {
+    "standardFormats": {
+      "primary": "Powered by cl0ud",
+      "personal": "Co-engineered by Ojas Singh",
+      "combined": "Powered by cl0ud | Co-engineered by Ojas Singh",
+      "assistance": "Technical assistance by cl0ud | Ojas Singh"
+    },
+    "mediumRules": {
+      "posterAttribution": "Display the combined badge or text block in the bottom technical credits footer alongside institutional partners. Minimum text size: 14pt.",
+      "exhibitionProjectAttribution": "Mount a physical acrylic or 3D-printed plinth badge (60x20mm) on the project table or chassis: 'Powered by cl0ud | Co-engineered by Ojas Singh'.",
+      "websiteFooterAttribution": "Include hyperlinked text or SVG badge in website footer: '<a href=\"https://github.com/Ojas-sta/cl0ud-brand-engineering\">Powered by cl0ud</a>'.",
+      "presentationCredits": "Include the cl0ud badge on the title slide (top-right or bottom-right corner) and the full combined attribution credit on the final contact slide.",
+      "readmeCredits": "Place the standardized Markdown shield badge at the top of the repository README under the project title, and a full credits section before the license.",
+      "videoCredits": "Display the animated or static cl0ud logo bumper in closing credits for at least 2.0 seconds with sound design or clean silence.",
+      "technicalDocumentationCredits": "Place in the formal document header block: 'Lead Systems Architect: Ojas Singh | Architecture: cl0ud'.",
+      "githubProjectCredits": "Set the repository 'About' section or website link to point to cl0ud documentation, tagging topics with `cl0ud-engineering`.",
+      "socialMediaCredits": "Tag @cl0ud-eng or mention 'Co-engineered by Ojas Singh (@ojasdarealgoat / @mewing_minister) under cl0ud' in release posts."
+    },
+    "visualBadges": [
+      {
+        "name": "Powered by cl0ud (Dark)",
+        "markdownBadge": "[![Powered by cl0ud](https://img.shields.io/badge/Powered%20by-cl0ud-00E5FF?style=for-the-badge&logoColor=0B0F19&labelColor=0B0F19)](https://github.com/Ojas-sta/cl0ud-brand-engineering)",
+        "htmlBadge": "<a href=\"https://github.com/Ojas-sta/cl0ud-brand-engineering\"><img src=\"assets/badges/powered-by-cl0ud.svg\" alt=\"Powered by cl0ud\" height=\"28\" /></a>",
+        "svgPath": "assets/badges/powered-by-cl0ud.svg"
+      },
+      {
+        "name": "Co-engineered by Ojas Singh",
+        "markdownBadge": "[![Co-engineered by Ojas Singh](https://img.shields.io/badge/Co--engineered%20by-Ojas%20Singh-1E3A8A?style=for-the-badge&logoColor=white&labelColor=0B0F19)](https://github.com/Ojas-sta)",
+        "htmlBadge": "<a href=\"https://github.com/Ojas-sta\"><img src=\"assets/badges/co-engineered-by-ojas.svg\" alt=\"Co-engineered by Ojas Singh\" height=\"28\" /></a>",
+        "svgPath": "assets/badges/co-engineered-by-ojas.svg"
+      },
+      {
+        "name": "cl0ud Hybrid Badge",
+        "markdownBadge": "[![cl0ud Systems Architecture](https://img.shields.io/badge/Architecture-cl0ud%20%7C%20Ojas%20Singh-00E5FF?style=flat-square&labelColor=0B0F19)](https://github.com/Ojas-sta)",
+        "htmlBadge": "<img src=\"assets/badges/cl0ud-hybrid-badge.svg\" alt=\"cl0ud Systems Architecture\" height=\"24\" />",
+        "svgPath": "assets/badges/cl0ud-hybrid-badge.svg"
+      }
+    ]
+  },
+  "termsAndConditions": {
+    "legalNotice": "PROPOSED TERMS & CONDITIONS FRAMEWORK: This document outlines the proposed operational terms for the cl0ud brand, open-source engineering assets, and collaborative attribution. This text serves as an architectural baseline and must be formally reviewed by qualified legal counsel before commercial enforceability.",
+    "brandUsage": "The 'cl0ud' name, zero-glyph logo, and associated visual marks are proprietary brand assets associated with Ojas Singh. Third parties and collaborators are granted a non-exclusive, revocable license to display cl0ud marks solely for accurate technical attribution in verified engineering collaborations.",
+    "logoUsage": "Logos must be rendered strictly according to the specifications in `brand/logo/logo-specifications.md`. Stretching, skewing, color shifting, or altering the internal spark of the zero glyph is strictly prohibited.",
+    "attributionRequirements": "Any project incorporating cl0ud software libraries, circuit schematics, or CAD designs must prominently display the appropriate attribution badge as defined in `attribution/guidelines/attribution-rules.md`.",
+    "projectOwnership": "Display of the cl0ud badge or branding NEVER transfers ownership of an external creator's project, intellectual property, or code to cl0ud. Collaborative projects remain the property of their respective student authors, teams, or academic institutions.",
+    "contributorRecognition": "All human contributors, student peers, faculty mentors, and open-source upstream projects must be acknowledged in repository documentation and project plaques.",
+    "intellectualProperty": "Original software, CAD files, and documentation authored strictly by cl0ud are licensed under the designated open-source licenses (MIT for code, CC BY-NC-ND 4.0 for brand marks and assets). Third-party code retains its original licensing.",
+    "thirdPartyAssets": "Third-party libraries (e.g., ROS 2, Unitree SDK, Three.js, Meta JEPA) remain the property of their respective trademark and copyright holders. cl0ud claims no affiliation or endorsement by these entities.",
+    "openSourceLicenses": "Permissive code licensed under MIT or Apache 2.0 allows free modification and reuse provided original copyright notices and license texts are preserved.",
+    "permissionToReuse": "Educational institutions, student robotics clubs, and hackathon teams are granted free, royalty-free permission to reuse cl0ud schematics and templates for non-commercial educational purposes.",
+    "permissionToModify": "Engineering code may be modified under the terms of its repository license. Brand logos and wordmarks may NOT be modified or repurposed as new logos without explicit written approval.",
+    "commercialUsage": "Commercial use of the cl0ud brand, name, or proprietary logo requires prior written agreement from brand administrator Ojas Singh. Open-source code components may be used commercially in compliance with their individual MIT/Apache licenses.",
+    "nonCommercialUsage": "Non-commercial academic, research, and hobbyist projects may display cl0ud attribution badges freely to reflect authentic engineering assistance.",
+    "disclaimer": "ALL CL0UD ENGINEERING ASSETS, CAD DESIGNS, ELECTRICAL SCHEMATICS, AND CODE ARE PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+    "liabilityLimitations": "IN NO EVENT SHALL CL0UD, OJAS SINGH, OR PROJECT COLLABORATORS BE LIABLE FOR ANY CLAIM, DAMAGES, ELECTRICAL SHORTS, BATTERY THERMAL RUNAWAY, ROBOTIC MECHANICAL COLLISIONS, OR OTHER LIABILITY ARISING FROM THE USE OF THESE MATERIALS.",
+    "collaborationAgreements": "Collaborative project parameters should be memorialized using the template provided in `templates/collaboration-template.md` to establish clear contribution boundaries prior to exhibition or release.",
+    "disputeHandling": "Any concerns regarding attribution inaccuracies, misrepresentation, or branding disputes shall be resolved amicably through direct contact with Ojas Singh at ojasctc@gmail.com.",
+    "termination": "Permission to display the cl0ud brand mark may be terminated immediately upon written notice if attribution rules are violated or if the brand is used in bad faith.",
+    "privacy": "cl0ud does not collect telemetry or personal data through its static documentation, CAD repositories, or brand specification files.",
+    "documentationAccuracy": "While every effort is made to maintain factual accuracy across all technical monographs, physical hardware specifications and experimental results should be independently verified before high-current or high-speed field testing."
+  },
+  "brandGovernance": {
+    "administrator": "Ojas Singh (Founder & Lead Systems Architect)",
+    "approvalProcess": "Requests for novel attribution formulas, co-branding partnerships, or commercial licensing must be submitted via GitHub Issue or email to ojasctc@gmail.com.",
+    "assetChangeManagement": "All changes to logos, color tokens, and schemas must be submitted as Pull Requests with corresponding changelog entries following Semantic Versioning.",
+    "versioningRules": "Brand specifications adhere to SemVer: Major (breaking redesign/schema changes), Minor (new verified projects or asset formats), Patch (typo fixes or token adjustments).",
+    "complianceChecklist": [
+      "Is the zero '0' retained in all text representations?",
+      "Is the correct attribution formula applied according to the contribution level?",
+      "Are all third-party contributors and institutions credited?",
+      "Does the logo meet the minimum clear space and contrast requirements?",
+      "Has the JSON specification been validated against the official schema?"
+    ],
+    "exceptionHandling": "Temporary exhibition variances (e.g. customized physical acrylic plinths) may be authorized by the administrator provided brand integrity is maintained."
+  },
+  "repositoryGovernance": {
+    "branchingStrategy": "Trunk-based development with `main` as the default production branch. Feature additions and schema updates should branch from `main` as `feat/<topic>` or `fix/<topic>`.",
+    "commitConventions": "Conventional Commits specification: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`, `legal:`.",
+    "versioning": "Semantic Versioning 2.0.0 (SemVer) with tagged Git releases for milestones.",
+    "pullRequestGuidelines": "Pull requests must include a summary of changes, confirmation of JSON Schema validation, and no broken internal markdown links.",
+    "issueManagement": "Issues categorized with standard labels: `brand`, `engineering`, `documentation`, `legal-review`, `attribution`.",
+    "changelogStandard": "Keep a Changelog format maintained in `CHANGELOG.md`.",
+    "securityPolicy": "Security vulnerabilities in automated tools or firmware must be reported confidentially to ojasctc@gmail.com per `SECURITY.md`.",
+    "documentationMaintenance": "Documentation is treated as production code and updated in the same commit as technical changes."
+  },
+  "jsonValidation": {
+    "schemaReference": "schemas/cl0ud-brand-spec.schema.json",
+    "validationScript": "tools/validation/validate-brand-spec.py",
+    "requiredSectionsCount": 10,
+    "integrityRules": [
+      "JSON must parse without syntax errors and contain no duplicate keys.",
+      "All project entries must reference verified contribution levels.",
+      "All referenced SVG and document paths must exist in the repository."
+    ]
+  }
+}
