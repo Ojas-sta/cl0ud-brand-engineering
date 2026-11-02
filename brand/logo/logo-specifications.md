@@ -9,21 +9,47 @@
 
 ## 1. Vector Geometry & Construction
 
-The cl0ud primary mark is built upon a precision geometric grid. It combines:
-1. **The Cloud Topology Outline:** Three contiguous circular arcs tangent to an open base line, anchored with $1.5\text{px}$ hardware telemetry nodes.
-2. **The Discrete Binary Core (`0`):** An optical ellipse ($r_x = 4.5\text{px}, r_y = 6.0\text{px}$) bisected by an internal $45^\circ$ diagonal spark line, representing computation and ground potential.
-3. **The Precision Wordmark:** Rendered with `Outfit` (700 Bold) for `cl` and `ud`, with the central `0` set in `JetBrains Mono` (800 Extra-Bold) in Electric Cyan (`#00E5FF`).
+The official cl0ud mark features the distinctive **Infinity-Cloud Topology**—an interlocking continuous monoline ribbon that forms a cloud silhouette intertwined with an infinity loop ($\infty$), symbolizing computational continuity, ground loops, and hardware integration.
 
 ```
-           ╭──────╮
-       ╭──╯        ╰──╮
-     ╭─╯     (0)      ╰─╮
-     ╰─●──────────────●─╯
+            ╭───────────────╮
+         ╭──╯   ╭──────╮    ╰──╮
+       ╭─╯     │  ╭───╮ │      ╰─╮
+       │   ╭───╯  │   │ ╰───╮    │
+       ╰───┴──────┴───┴─────┴────╯
 ```
+
+### Key Geometric Elements:
+1. **The Interlocking Ribbon Stroke:** A uniform, bold stroke that ascends on the left, loops smoothly across the upper canopy, sweeps downward in a reverse S-curve into the internal core, and anchors horizontally along the base.
+2. **Master Vector Source:** Vectorized and normalized directly from the official master artwork ([`assets/logos/cl0ud-icon.svg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/logos/cl0ud-icon.svg) and reference image [`assets/reference/cl0ud-official-logo-master.jpg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/reference/cl0ud-official-logo-master.jpg)).
+3. **Aspect Ratio:** $608\text{px} \times 408\text{px}$ ($\approx 1.49 : 1$, or $3:2$).
 
 ---
 
-## 2. Technical SVG Specifications
+## 2. Official Credit Card Component & Plaque Spec
+
+The official engineering attribution credit card ([`assets/badges/cl0ud-credit-card.svg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/badges/cl0ud-credit-card.svg) and reference [`assets/reference/cl0ud-credit-card-spec.png`](file:///Users/roopalisingh/Desktop/cl0ud/assets/reference/cl0ud-credit-card-spec.png)) defines the standardized physical and digital attribution card:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        POWERED BY cl0ud ☁️                              │
+├────────────────────────────────────────────────────────────────────────┤
+│                            CO-ENGINEERED BY                            │
+│                               OJAS SINGH                               │
+│                 Engineering • Innovation • Development                 │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+- **Container:** Rounded rectangle ($R=22\text{px}$), pitch black background (`#000000`), subtle border (`#262626`).
+- **Top Row:** `POWERED BY cl0ud` paired with the cyan outline infinity-cloud icon (`#38BDF8`).
+- **Divider:** 1px hairline divider (`#262626`).
+- **Role Line:** `CO-ENGINEERED BY` in muted slate (`#A1A1AA`), $15\text{px}$, letter-spacing $0.14\text{em}$.
+- **Name Line:** `OJAS SINGH` in bright white (`#FFFFFF`), $26\text{px}$, bold.
+- **Discipline Tagline:** `Engineering • Innovation • Development` in muted slate (`#A1A1AA`), $14\text{px}$.
+
+---
+
+## 3. Technical SVG Specifications
 
 - **ViewBox:** `0 0 280 70` (Primary Lockup) | `0 0 64 64` (Standalone Icon)
 - **Stroke Width:** Standard $2.5\text{px}$ vector line with round line-caps (`stroke-linecap="round"`) and round joins (`stroke-linejoin="round"`).

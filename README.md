@@ -137,7 +137,20 @@ graph TD
     E -->|No| G[Formula 4: Powered by cl0ud]
 ```
 
+### Official cl0ud Engineering Credit Card Badge
+The standardized attribution card for physical plinths, exhibition websites, and documentation footers:
+
+<div align="center">
+  <img src="assets/badges/cl0ud-credit-card.svg" alt="Official cl0ud Credit Card: Powered by cl0ud | Co-Engineered by Ojas Singh" width="100%" style="max-width: 820px;" />
+</div>
+
+<br/>
+
 ### Ready-to-Use Attribution Snippets
+- **Official Credit Card SVG:** [`assets/badges/cl0ud-credit-card.svg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/badges/cl0ud-credit-card.svg)
+- **Drop-in Web Component (HTML/CSS):** [`attribution/formats/credit-card-component.html`](file:///Users/roopalisingh/Desktop/cl0ud/attribution/formats/credit-card-component.html)
+- **React / Next.js Component:** [`attribution/formats/credit-card-component.jsx`](file:///Users/roopalisingh/Desktop/cl0ud/attribution/formats/credit-card-component.jsx)
+- **Vue 3 Component:** [`attribution/formats/credit-card-component.vue`](file:///Users/roopalisingh/Desktop/cl0ud/attribution/formats/credit-card-component.vue)
 - **Primary Shield:** `[![Powered by cl0ud](https://img.shields.io/badge/Powered%20by-cl0ud-00E5FF?style=for-the-badge&logoColor=0B0F19&labelColor=0B0F19)](https://github.com/Ojas-sta/cl0ud-brand-engineering)`
 - **Personal Shield:** `[![Co-engineered by Ojas Singh](https://img.shields.io/badge/Co--engineered%20by-Ojas%20Singh-1E3A8A?style=for-the-badge&logoColor=white&labelColor=0B0F19)](https://github.com/Ojas-sta)`
 - **Physical Plinth Badge:** See [`assets/badges/exhibition-plinth-badge.svg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/badges/exhibition-plinth-badge.svg).

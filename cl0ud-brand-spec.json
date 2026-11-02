@@ -594,6 +594,12 @@
         "markdownBadge": "[![cl0ud Systems Architecture](https://img.shields.io/badge/Architecture-cl0ud%20%7C%20Ojas%20Singh-00E5FF?style=flat-square&labelColor=0B0F19)](https://github.com/Ojas-sta)",
         "htmlBadge": "<img src=\"assets/badges/cl0ud-hybrid-badge.svg\" alt=\"cl0ud Systems Architecture\" height=\"24\" />",
         "svgPath": "assets/badges/cl0ud-hybrid-badge.svg"
+      },
+      {
+        "name": "Official cl0ud Engineering Credit Card",
+        "markdownBadge": "[![Powered by cl0ud | Co-engineered by Ojas Singh](assets/badges/cl0ud-credit-card.svg)](https://github.com/Ojas-sta)",
+        "htmlBadge": "<a href=\"https://github.com/Ojas-sta\"><img src=\"assets/badges/cl0ud-credit-card.svg\" alt=\"Powered by cl0ud | Co-engineered by Ojas Singh\" width=\"100%\" /></a>",
+        "svgPath": "assets/badges/cl0ud-credit-card.svg"
       }
     ]
   },
