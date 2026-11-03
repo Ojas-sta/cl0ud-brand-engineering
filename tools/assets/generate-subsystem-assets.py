@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """
-cl0ud Subsystem Asset Generator
-Generates standalone production SVG assets (Apple-style lockups and GitHub README badges)
-for all cl0ud root subsystems and hierarchical nested sub-subsystems.
+cl0ud Subsystem Asset Generator — Apple Lockup Standard
+Generates authentic standalone production SVG assets matching Apple's official
+product lockups (Pay, Card) with exact typography, optical kerning, and baseline anchoring.
+
+Output formats:
+1. black/  — Solid Black (#000000) on transparent background (for light surfaces & print)
+2. white/  — Solid White (#FFFFFF) on transparent background (for dark surfaces & keynotes)
+3. cyan/   — Electric Cyan (#00E5FF) on transparent background (signature brand variant)
+4. badges/ — Shields.io-style developer badges for GitHub README status bars
 """
 
 import os
 import sys
 from pathlib import Path
+from PIL import ImageFont
 
 CLOUD_PATH = (
     "M 309.8 1.5 c -23.8 3.0 -45.7 11.0 -65.4 23.8 -16.7 10.8 -31.5 24.8 -42.8 40.3 "
@@ -32,6 +39,15 @@ CLOUD_PATH = (
     "c -0.4 -28.7 -0.3 -45.4 0.5 -51.9 3.2 -28.0 16.3 -52.6 37.0 -69.1 13.7 -11.0 32.0 "
     "-19.2 48.6 -21.8 7.8 -1.2 24.2 -0.5 33.1 1.4 z"
 )
+
+# Load San Francisco system font or fallback
+try:
+    SF_FONT = ImageFont.truetype("/System/Library/Fonts/SFNS.ttf", 48)
+except Exception:
+    try:
+        SF_FONT = ImageFont.truetype("/Library/Fonts/Arial.ttf", 48)
+    except Exception:
+        SF_FONT = None
 
 # Complete Subsystems Definition List
 # Format: (id, name, parent, child, category, description)
@@ -115,6 +131,11 @@ SUBSYSTEMS = [
     # ==================== PROJECT HIERARCHICAL SUBSYSTEMS ====================
     # ESP32 SmartLock Access System (PRJ-008)
     ("access", "Access", None, None, "SmartLock Project", "Offline-First Physical Access Domain"),
+    ("latch", "Latch", "Access", "Latch", "SmartLock Project", "50Hz Hardware LEDC PWM Door Servo (GPIO 18)"),
+    ("otp", "OTP", "Access", "OTP", "SmartLock Project", "Single-Use 4-Digit Crypto Passcode (1000-9999)"),
+    ("portal", "Portal", "Access", "Portal", "SmartLock Project", "SoftAP Self-Hosted Web Server (192.168.4.1)"),
+    ("keypad", "Keypad", "Access", "Keypad", "SmartLock Project", "Debounced 4x4 Matrix Keypad Scanner (HX543)"),
+    ("feedback", "Feedback", "Access", "Feedback", "SmartLock Project", "16x2 Character I2C LCD Display (0x27)"),
     ("access-latch", "Access • Latch", "Access", "Latch", "SmartLock Project", "50Hz Hardware LEDC PWM Door Servo (GPIO 18)"),
     ("access-otp", "Access • OTP", "Access", "OTP", "SmartLock Project", "Single-Use 4-Digit Crypto Passcode (1000-9999)"),
     ("access-portal", "Access • Portal", "Access", "Portal", "SmartLock Project", "SoftAP Self-Hosted Web Server (192.168.4.1)"),
@@ -125,6 +146,9 @@ SUBSYSTEMS = [
 
     # BINZO Smart Autonomous Mecanum Robot (PRJ-005)
     ("binzo", "Binzo", None, None, "BINZO Robot Project", "Autonomous Holonomic Service Robot Base"),
+    ("holonomic", "Holonomic", "Binzo", "Holonomic", "BINZO Robot Project", "4WD Mecanum Wheel Vector Kinematics"),
+    ("sight", "Sight", "Binzo", "Sight", "BINZO Robot Project", "K210 YOLOv2 Person Detection Visual Servoing"),
+    ("mouth", "Mouth", "Binzo", "Mouth", "BINZO Robot Project", "MG90S Servo Mouth Lid (0° ⇄ 95°) with Chimes"),
     ("binzo-core", "Binzo • Core", "Binzo", "Core", "BINZO Robot Project", "M5Stack Core2 ESP32 & 320x240 LCD Dashboard"),
     ("binzo-holonomic", "Binzo • Holonomic", "Binzo", "Holonomic", "BINZO Robot Project", "4WD Mecanum Wheel Vector Kinematics"),
     ("binzo-motordriver", "Binzo • MotorDriver", "Binzo", "MotorDriver", "BINZO Robot Project", "I2C 4-Channel Motor Encoder Module (0x24)"),
@@ -136,6 +160,8 @@ SUBSYSTEMS = [
 
     # DPSI Exhibition 2026 Virtual Platform (PRJ-002)
     ("expo", "Expo", None, None, "DPSI Expo Project", "Spatial 3D Exhibition & Anti-Cheat Voting"),
+    ("hall", "Hall", "Expo", "Hall", "DPSI Expo Project", "React Three Fiber Photorealistic 3D Concours"),
+    ("ballot", "Ballot", "Expo", "Ballot", "DPSI Expo Project", "4-Tier Anti-Cheat Device Fingerprint Voting"),
     ("expo-hall", "Expo • Hall", "Expo", "Hall", "DPSI Expo Project", "React Three Fiber Photorealistic 3D Concours"),
     ("expo-tour", "Expo • Tour", "Expo", "Tour", "DPSI Expo Project", "6-Waypoint Automated Camera Drone Tour"),
     ("expo-synth", "Expo • Synth", "Expo", "Synth", "DPSI Expo Project", "Procedural Web Audio Soundscape Synthesizer"),
@@ -143,140 +169,158 @@ SUBSYSTEMS = [
     ("expo-ballot", "Expo • Ballot", "Expo", "Ballot", "DPSI Expo Project", "4-Tier Anti-Cheat Device Fingerprint Voting"),
 
     # Project CLOUD Quadruped Robot (PRJ-001)
+    ("cloud", "Cloud", None, None, "Project CLOUD", "Autonomous Quadruped Systems Architecture"),
     ("cloud-kinematics", "Cloud • Kinematics", "Cloud", "Kinematics", "Project CLOUD", "12-DOF Active Joint Quadruped Locomotion"),
     ("cloud-caddy", "Cloud • Caddy", "Cloud", "Caddy", "Project CLOUD", "Back-Load Guide Rail & 3D Utility Caddy"),
     ("cloud-power", "Cloud • Power", "Cloud", "Power", "Project CLOUD", "28.8V -> 12V/5V Isolated Electrical Topology"),
     ("cloud-perception", "Cloud • Perception", "Cloud", "Perception", "Project CLOUD", "RealSense D435i Depth & 4D LiDAR SLAM"),
     ("cloud-cognition", "Cloud • Cognition", "Cloud", "Cognition", "Project CLOUD", "Dual-Persona ARGUS & Docent Conversational RAG"),
-
-    # Loom IAC & Wiring
     ("loom-iac", "Loom • IAC", "Loom", "IAC", "Embedded IAC & Wiring", "Infrastructure-as-Circuit Automated Pinout Header"),
 ]
 
-def estimate_text_width(text, font_size=20):
-    """Estimate pixel width for text rendered with Outfit font."""
+def calculate_text_metrics(text, font_size=48.0):
+    """Accurately measure text width using San Francisco system font with fallback."""
+    if SF_FONT:
+        bbox = SF_FONT.getbbox(text)
+        return float(bbox[2] - bbox[0])
+    # Fallback character approximation
     char_widths = {
-        ' ': 0.28, 'i': 0.30, 'l': 0.30, 'I': 0.32, 't': 0.38, 'f': 0.38, 'r': 0.42,
-        'j': 0.35, '•': 0.45, 'm': 0.82, 'w': 0.80, 'M': 0.88, 'W': 0.92,
-        'A': 0.68, 'B': 0.66, 'C': 0.68, 'D': 0.70, 'E': 0.64, 'F': 0.60,
-        'G': 0.72, 'H': 0.72, 'K': 0.68, 'N': 0.72, 'O': 0.74, 'P': 0.64,
-        'R': 0.68, 'S': 0.64, 'T': 0.60, 'U': 0.72, 'V': 0.66, 'X': 0.66,
-        'Y': 0.64, 'Z': 0.64
+        ' ': 0.28, 'i': 0.28, 'l': 0.28, 'I': 0.30, 't': 0.35, 'f': 0.35, 'r': 0.38,
+        'j': 0.32, '•': 0.45, 'm': 0.82, 'w': 0.80, 'M': 0.86, 'W': 0.90,
+        'A': 0.66, 'B': 0.64, 'C': 0.66, 'D': 0.68, 'E': 0.62, 'F': 0.58,
+        'G': 0.70, 'H': 0.70, 'K': 0.66, 'N': 0.70, 'O': 0.72, 'P': 0.62,
+        'R': 0.66, 'S': 0.62, 'T': 0.58, 'U': 0.70, 'V': 0.64, 'X': 0.64,
+        'Y': 0.62, 'Z': 0.62
     }
     w = 0.0
     for ch in text:
-        w += char_widths.get(ch, 0.58) * font_size
+        w += char_widths.get(ch, 0.56) * font_size
     return w
 
-def generate_lockup_svg(sub_id, display_name, parent, child, category, description):
-    """Generate high-contrast Apple-style standalone lockup SVG."""
-    # Font sizing
-    font_size = 22
-    
-    # Calculate widths
-    if parent and child:
-        w_parent = estimate_text_width(parent, font_size)
-        w_sep = estimate_text_width(" • ", font_size)
-        w_child = estimate_text_width(child, font_size)
-        total_text_width = w_parent + w_sep + w_child
-    else:
-        total_text_width = estimate_text_width(display_name, font_size)
+def generate_apple_lockup_svg(sub_id, display_name, parent, child, color_mode="black"):
+    """
+    Generate naked Apple-style lockup (Pay / Card style).
+    No background box. Pure vector mark + text on transparent canvas.
+    Exact metrics:
+      - Font size: 48px
+      - Cap-Height H: ~36px
+      - Symbol Height Hs: 1.05 * H = 37.8px
+      - Symbol Width Ws: 55.3px (from 593:405.1 ratio)
+      - Optical Gap G: 0.18 * H = 6.5px (tight Apple kerning)
+      - Baseline Alignment: Bottom of cloud matches baseline of text
+    """
+    font_size = 48.0
+    cap_height = 36.0
+    symbol_height = 1.05 * cap_height  # 37.8px
+    symbol_scale = symbol_height / 405.1  # 0.09331
+    symbol_width = 593.0 * symbol_scale  # 55.33px
+    optical_gap = 6.5  # tight Apple spacing
 
-    # Symbol sizing: Height ~ 24px (1.05x cap height 22.8px)
-    symbol_height = 24.0
-    symbol_scale = symbol_height / 408.0  # ~0.0588
-    symbol_width = 608.0 * symbol_scale  # ~35.7px
-    optical_gap = 10.0
-    padding_x = 16.0
-    height = 46.0
-
-    width = padding_x + symbol_width + optical_gap + total_text_width + padding_x + 4.0
-    width = max(width, 140.0)
-
-    # Baseline positioning
-    baseline_y = 30.0
-    symbol_y = baseline_y - symbol_height + 0.5
-
-    # Text rendering markup
-    if parent and child:
-        x_parent = padding_x + symbol_width + optical_gap
-        x_sep = x_parent + w_parent
-        x_child = x_sep + w_sep
-        text_content = f"""    <text x="{x_parent:.1f}" y="{baseline_y}" class="parent-text">{parent}</text>
-    <text x="{x_sep + 3.0:.1f}" y="{baseline_y}" class="sep-text">•</text>
-    <text x="{x_child:.1f}" y="{baseline_y}" class="child-text">{child}</text>"""
-    else:
-        x_text = padding_x + symbol_width + optical_gap
-        text_content = f"""    <text x="{x_text:.1f}" y="{baseline_y}" class="parent-text">{display_name}</text>"""
-
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width:.1f} {height:.1f}" width="{width:.1f}" height="{height:.1f}" fill="none">
-  <!-- cl0ud Subsystem Lockup: {display_name} -->
-  <!-- Category: {category} | Description: {description} -->
-  <defs>
+    # Determine colors
+    if color_mode == "black":
+        fill_color = "#000000"
+        child_color = "#475569"
+        sep_color = "#000000"
+        grad_def = ""
+        symbol_fill = "#000000"
+    elif color_mode == "white":
+        fill_color = "#FFFFFF"
+        child_color = "#94A3B8"
+        sep_color = "#FFFFFF"
+        grad_def = ""
+        symbol_fill = "#FFFFFF"
+    elif color_mode == "cyan":
+        fill_color = "#F8FAFC"
+        child_color = "#94A3B8"
+        sep_color = "#00E5FF"
+        grad_def = f"""  <defs>
     <linearGradient id="cyanGrad-{sub_id}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00E5FF"/>
       <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&amp;display=swap');
-      .parent-text {{
-        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: {font_size}px;
-        font-weight: 600;
-        fill: #F8FAFC;
-        letter-spacing: -0.02em;
-      }}
-      .sep-text {{
-        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: {font_size}px;
-        font-weight: 700;
-        fill: #00E5FF;
-      }}
-      .child-text {{
-        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: {font_size}px;
-        font-weight: 500;
-        fill: #94A3B8;
-        letter-spacing: -0.01em;
-      }}
-    </style>
-  </defs>
+  </defs>"""
+        symbol_fill = f"url(#cyanGrad-{sub_id})"
 
-  <!-- Container Pill -->
-  <rect x="0.5" y="0.5" width="{width - 1.0:.1f}" height="{height - 1.0:.1f}" rx="8" fill="#0B0F19" stroke="#1E293B" stroke-width="1"/>
+    # Calculate exact text width
+    if parent and child:
+        w_parent = calculate_text_metrics(parent, font_size)
+        w_sep = calculate_text_metrics(" • ", font_size)
+        w_child = calculate_text_metrics(child, font_size)
+        total_text_width = w_parent + w_sep + w_child
+    else:
+        total_text_width = calculate_text_metrics(display_name, font_size)
 
-  <!-- Official Infinity-Cloud Logo Symbol -->
-  <g transform="translate({padding_x:.1f}, {symbol_y:.1f}) scale({symbol_scale:.4f})" fill="url(#cyanGrad-{sub_id})">
+    # Canvas dimensions
+    padding_left = 2.0
+    padding_right = 4.0
+    total_width = padding_left + symbol_width + optical_gap + total_text_width + padding_right
+    total_height = 58.0
+
+    # Vertical positioning: baseline at Y = 44.0
+    baseline_y = 44.0
+    symbol_y = baseline_y - symbol_height
+    symbol_x = padding_left
+
+    # Text positioning
+    text_start_x = padding_left + symbol_width + optical_gap
+
+    if parent and child:
+        x_parent = text_start_x
+        x_sep = x_parent + w_parent
+        x_child = x_sep + w_sep
+        text_element = f"""  <text x="{x_parent:.1f}" y="{baseline_y:.1f}" class="lockup-parent" fill="{fill_color}">{parent}</text>
+  <text x="{x_sep:.1f}" y="{baseline_y:.1f}" class="lockup-sep" fill="{sep_color}"> • </text>
+  <text x="{x_child:.1f}" y="{baseline_y:.1f}" class="lockup-child" fill="{child_color}">{child}</text>"""
+    else:
+        text_element = f"""  <text x="{text_start_x:.1f}" y="{baseline_y:.1f}" class="lockup-parent" fill="{fill_color}">{display_name}</text>"""
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {total_width:.1f} {total_height:.1f}" width="{total_width:.1f}" height="{total_height:.1f}" fill="none">
+  <!-- cl0ud Apple-Style Lockup: {display_name} ({color_mode.capitalize()}) -->
+{grad_def}
+  <style>
+    .lockup-parent {{
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Outfit", "Helvetica Neue", sans-serif;
+      font-size: {font_size:.1f}px;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }}
+    .lockup-sep {{
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", sans-serif;
+      font-size: {font_size:.1f}px;
+      font-weight: 700;
+    }}
+    .lockup-child {{
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Outfit", "Helvetica Neue", sans-serif;
+      font-size: {font_size:.1f}px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }}
+  </style>
+
+  <!-- Infinity Cloud Symbol -->
+  <g transform="translate({symbol_x:.1f}, {symbol_y:.1f}) scale({symbol_scale:.4f})" fill="{symbol_fill}">
     <path fill-rule="evenodd" d="{CLOUD_PATH}"/>
   </g>
 
-  <!-- Typographic Subsystem Label -->
-{text_content}
+  <!-- Product Name -->
+{text_element}
 </svg>"""
     return svg
 
 def generate_badge_svg(sub_id, display_name, parent, child, category, description):
     """Generate GitHub README badge matching Shields.io standards."""
     font_size = 11.0
-    text_label = f"cl0ud {display_name}"
-    
-    # Left pill (cl0ud icon container)
     left_width = 32.0
-    
-    # Right pill text width
-    text_width = estimate_text_width(display_name, font_size) + 18.0
+    text_width = calculate_text_metrics(display_name, font_size) + 18.0
     text_width = max(text_width, 48.0)
-    
     total_width = left_width + text_width
     height = 24.0
-    
-    # Icon scaling for badge: Height = 14px
+
     icon_h = 14.0
     icon_scale = icon_h / 408.0
     icon_w = 608.0 * icon_scale
     icon_x = (left_width - icon_w) / 2.0
     icon_y = (height - icon_h) / 2.0
-    
     text_x = left_width + (text_width / 2.0)
     text_y = 16.0
 
@@ -290,121 +334,143 @@ def generate_badge_svg(sub_id, display_name, parent, child, category, descriptio
   </defs>
 
   <g shape-rendering="crispEdges">
-    <!-- Left Background: Obsidian -->
     <path fill="#0B0F19" d="M0 0 h{left_width:.1f} v{height:.1f} H0 z"/>
-    <!-- Right Background: Deep Slate -->
     <path fill="#0F172A" d="M{left_width:.1f} 0 h{text_width:.1f} v{height:.1f} H{left_width:.1f} z"/>
   </g>
 
-  <!-- Border Frame -->
   <rect x="0.5" y="0.5" width="{total_width - 1.0:.1f}" height="{height - 1.0:.1f}" rx="4" fill="none" stroke="#1E293B" stroke-width="1"/>
 
-  <!-- Infinity Cloud Icon -->
   <g transform="translate({icon_x:.1f}, {icon_y:.1f}) scale({icon_scale:.4f})" fill="url(#badgeCyan-{sub_id})">
     <path fill-rule="evenodd" d="{CLOUD_PATH}"/>
   </g>
 
-  <!-- Subsystem Text -->
-  <text x="{text_x:.1f}" y="{text_y:.1f}" text-anchor="middle" font-family="'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="{font_size}px" font-weight="600" fill="#00E5FF" letter-spacing="-0.01em">{display_name}</text>
+  <text x="{text_x:.1f}" y="{text_y:.1f}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Outfit', sans-serif" font-size="{font_size}px" font-weight="600" fill="#00E5FF" letter-spacing="-0.01em">{display_name}</text>
 </svg>"""
     return svg
 
 def main():
     root = Path(__file__).resolve().parent.parent.parent
     subsystems_dir = root / "assets" / "subsystems"
-    lockups_dir = subsystems_dir / "lockups"
+    black_dir = subsystems_dir / "black"
+    white_dir = subsystems_dir / "white"
+    cyan_dir = subsystems_dir / "cyan"
     badges_dir = subsystems_dir / "badges"
 
-    lockups_dir.mkdir(parents=True, exist_ok=True)
+    black_dir.mkdir(parents=True, exist_ok=True)
+    white_dir.mkdir(parents=True, exist_ok=True)
+    cyan_dir.mkdir(parents=True, exist_ok=True)
     badges_dir.mkdir(parents=True, exist_ok=True)
 
     print("==================================================")
-    print("cl0ud Subsystem Asset Generator")
-    print(f"Total Subsystems to Process: {len(SUBSYSTEMS)}")
-    print(f"Output Directory: {subsystems_dir}")
+    print("cl0ud Apple-Style Subsystem Asset Generator")
+    print(f"Total Subsystems: {len(SUBSYSTEMS)}")
+    print(f"Output: {subsystems_dir}")
     print("==================================================")
 
     readme_rows = []
 
     for sub_id, name, parent, child, cat, desc in SUBSYSTEMS:
-        lockup_filename = f"cl0ud-{sub_id}.svg"
+        filename = f"cl0ud-{sub_id}.svg"
         badge_filename = f"cl0ud-{sub_id}-badge.svg"
 
-        lockup_path = lockups_dir / lockup_filename
-        badge_path = badges_dir / badge_filename
+        # Generate Black (for light surfaces)
+        svg_black = generate_apple_lockup_svg(sub_id, name, parent, child, "black")
+        with open(black_dir / filename, "w", encoding="utf-8") as f:
+            f.write(svg_black)
 
-        lockup_svg = generate_lockup_svg(sub_id, name, parent, child, cat, desc)
-        badge_svg = generate_badge_svg(sub_id, name, parent, child, cat, desc)
+        # Generate White (for dark surfaces)
+        svg_white = generate_apple_lockup_svg(sub_id, name, parent, child, "white")
+        with open(white_dir / filename, "w", encoding="utf-8") as f:
+            f.write(svg_white)
 
-        with open(lockup_path, "w", encoding="utf-8") as f:
-            f.write(lockup_svg)
+        # Generate Cyan (Electric Cyan signature)
+        svg_cyan = generate_apple_lockup_svg(sub_id, name, parent, child, "cyan")
+        with open(cyan_dir / filename, "w", encoding="utf-8") as f:
+            f.write(svg_cyan)
 
-        with open(badge_path, "w", encoding="utf-8") as f:
-            f.write(badge_svg)
+        # Generate Developer Badge
+        svg_badge = generate_badge_svg(sub_id, name, parent, child, cat, desc)
+        with open(badges_dir / badge_filename, "w", encoding="utf-8") as f:
+            f.write(svg_badge)
 
         readme_rows.append(
-            f"| `{sub_id}` | **{name}** | {cat} | ![{name}](lockups/{lockup_filename}) | ![{name}](badges/{badge_filename}) | {desc} |"
+            f"| `{sub_id}` | **{name}** | {cat} | ![{name} Black](black/{filename}) | ![{name} Cyan](cyan/{filename}) | ![{name}](badges/{badge_filename}) | {desc} |"
         )
 
-    # Generate visual catalog README.md
-    readme_content = f"""# cl0ud — Official Subsystem Vector Asset Registry
+    # Master README
+    readme_content = f"""# cl0ud — Official Subsystem Vector Asset Registry (Apple Lockup Standard)
 
-> **System Designation:** Standalone Subsystem Vector Assets & Lockups  
-> **Brand Mark:** cl0ud Official Infinity-Cloud  
-> **Typography:** Outfit (Semi-Bold 600 / Medium 500)  
-> **Asset Count:** {len(SUBSYSTEMS)} Lockups + {len(SUBSYSTEMS)} Developer Badges  
+> **Brand Lockup Standard:** Apple-Style Direct Glyph Lockup (`Pay` / `Card` Paradigm)  
+> **Typography:** `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Outfit"` (Semi-Bold 600)  
+> **Optical Metrics:** Height = $1.05\\times$ Cap-Height | Kerning Gap = $0.18\\times$ Cap-Height | Direct Baseline Anchoring  
+> **Colorways:** Solid Black (Light mode / Print), Solid White (Dark mode / OLED), Electric Cyan (Hero UI)  
+> **Asset Count:** {len(SUBSYSTEMS) * 4} Total Vector SVGs ({len(SUBSYSTEMS)} Black, {len(SUBSYSTEMS)} White, {len(SUBSYSTEMS)} Cyan, {len(SUBSYSTEMS)} Badges)  
 > **Generator Script:** [`tools/assets/generate-subsystem-assets.py`](file:///Users/roopalisingh/Desktop/cl0ud/tools/assets/generate-subsystem-assets.py)
 
 ---
 
-## 1. Usage in Documentation & Codebases
+## 1. Visual Comparison: Apple Pay / Apple Card Standard
 
-### Markdown Inline Lockup
-```markdown
-![cl0ud Bedrock](assets/subsystems/lockups/cl0ud-bedrock.svg)
-![cl0ud Wireframe](assets/subsystems/lockups/cl0ud-wireframe.svg)
-![cl0ud Access • Latch](assets/subsystems/lockups/cl0ud-access-latch.svg)
-![cl0ud Binzo • Holonomic](assets/subsystems/lockups/cl0ud-binzo-holonomic.svg)
+```
+Pay  (Apple Pay:  Apple Symbol + SF Pro Semibold + 0.18x Cap-Height Gap)
+Card (Apple Card: Apple Symbol + SF Pro Semibold + 0.18x Cap-Height Gap)
+☁Pay  (cl0ud Pay:  Infinity Symbol + SF Pro Semibold + 0.18x Cap-Height Gap)
+☁Card (cl0ud Card: Infinity Symbol + SF Pro Semibold + 0.18x Cap-Height Gap)
 ```
 
-### GitHub README Shield Badge
+### Optical Metric Formula
+- Symbol Height (Hs): Exactly 1.05 * H_cap
+- Kerning Gap (G): Exactly 0.18 * H_cap (tight integrated unit spacing)
+- Baseline Offset: 0px (the flat base of the infinity symbol rests exactly on the font baseline)
+- Canvas: 100% transparent background with no outer container box or pill frame.
+
+---
+
+## 2. Usage Examples
+
+### Light Mode / Academic Paper / Print (Solid Black)
+```markdown
+![cl0ud Bedrock](assets/subsystems/black/cl0ud-bedrock.svg)
+![cl0ud Wireframe](assets/subsystems/black/cl0ud-wireframe.svg)
+![cl0ud Access Latch](assets/subsystems/black/cl0ud-access-latch.svg)
+```
+
+### Dark Mode / OLED Display / Keynote (Solid White)
+```markdown
+![cl0ud Bedrock](assets/subsystems/white/cl0ud-bedrock.svg)
+![cl0ud Wireframe](assets/subsystems/white/cl0ud-wireframe.svg)
+![cl0ud Access Latch](assets/subsystems/white/cl0ud-access-latch.svg)
+```
+
+### Web Hero / Cyan Accent
+```markdown
+![cl0ud Bedrock](assets/subsystems/cyan/cl0ud-bedrock.svg)
+![cl0ud Binzo Holonomic](assets/subsystems/cyan/cl0ud-binzo-holonomic.svg)
+```
+
+### GitHub README Status Badges
 ```markdown
 [![cl0ud Bedrock](assets/subsystems/badges/cl0ud-bedrock-badge.svg)](https://github.com/Ojas-sta/cl0ud-brand-engineering)
 [![cl0ud Access Latch](assets/subsystems/badges/cl0ud-access-latch-badge.svg)](https://github.com/Ojas-sta/cl0ud-brand-engineering)
 ```
 
-### HTML / Web Embedding
-```html
-<img src="/assets/subsystems/lockups/cl0ud-access-latch.svg" alt="cl0ud Access Latch" height="46" />
-```
-
 ---
 
-## 2. Master Gallery of All Subsystem Assets
+## 3. Master Subsystem Gallery
 
-| ID | Subsystem Name | Architectural Domain | Standalone Lockup Asset | Developer Badge Asset | Technical Scope |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | Subsystem Name | Domain | Black (Light Mode) | Cyan (Brand Hero) | GitHub Badge | Technical Scope |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 """ + "\n".join(readme_rows) + """
-
----
-
-## 3. Vector Specifications
-
-- **Aspect Ratio:** Normalized $608 : 408$ master infinity-cloud icon geometry.
-- **Color Finishes:**
-  - Symbol: Electric Cyan gradient (`#00E5FF` $\\rightarrow$ `#38BDF8`).
-  - Container: Deep Obsidian (`#0B0F19`) with `#1E293B` stroke.
-  - Text: Crisp Cloud White (`#F8FAFC`), Delimiter (`#00E5FF`), Child (`#94A3B8`).
-- **Typography:** Self-contained `@import` rule for Google Fonts Outfit (`600`/`500`) with system fallback.
 """
 
     with open(subsystems_dir / "README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
 
-    print(f"Generated {len(SUBSYSTEMS)} lockup SVGs in {lockups_dir}")
-    print(f"Generated {len(SUBSYSTEMS)} badge SVGs in {badges_dir}")
-    print(f"Generated Catalog README in {subsystems_dir / 'README.md'}")
-    print("SUCCESS: All cl0ud subsystem assets generated successfully.")
+    print(f"Generated {len(SUBSYSTEMS)} Black SVGs in {black_dir}")
+    print(f"Generated {len(SUBSYSTEMS)} White SVGs in {white_dir}")
+    print(f"Generated {len(SUBSYSTEMS)} Cyan SVGs in {cyan_dir}")
+    print(f"Generated {len(SUBSYSTEMS)} Badge SVGs in {badges_dir}")
+    print(f"Total: {len(SUBSYSTEMS) * 4} production assets created successfully.")
 
 if __name__ == "__main__":
     main()
