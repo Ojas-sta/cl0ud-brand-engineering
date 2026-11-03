@@ -99,6 +99,12 @@ cl0ud provides architectures, schematics, and open-source tooling across six spe
 5. **Autonomous Service Robotics:** Optical centroid target tracking via OpenCV, differential-drive PID velocity control, and ultrasonic proximity safety rings.
 6. **AgriTech & Environmental IoT:** Precision analog pH and EC probe calibration, automated peristaltic dosing pumps, and real-time MQTT telemetry pipelines.
 
+### -Style Subsystem Lockup Model (`[☁] + [Name]`)
+Internal subsystems, hardware layers, and software products follow the unified inline glyph lockup model (e.g., `☁ Bedrock`, `☁ Vertex`, `☁ Borg`, `☁ Artifact`):
+- **50-Module Subsystems Catalog:** [`engineering/architecture/subsystems-catalog.md`](file:///Users/roopalisingh/Desktop/cl0ud/engineering/architecture/subsystems-catalog.md)
+- **Lockup & Typography Guidelines:** [`brand/guidelines/subsystem-lockup-specifications.md`](file:///Users/roopalisingh/Desktop/cl0ud/brand/guidelines/subsystem-lockup-specifications.md)
+- **Vector Lockup Blueprint:** [`assets/logos/cl0ud-lockup-system.svg`](file:///Users/roopalisingh/Desktop/cl0ud/assets/logos/cl0ud-lockup-system.svg)
+
 ---
 
 ## 4. Project Taxonomy & Ecosystem Registry

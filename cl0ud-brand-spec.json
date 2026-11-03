@@ -73,7 +73,8 @@
     "usagePrinciples": [
       "The zero '0' in cl0ud signifies binary determinism, clean resets, and computational grounding.",
       "cl0ud must always be paired with the appropriate attribution level when appearing on collaborative or school exhibition projects.",
-      "cl0ud may never be used to imply unilateral ownership over collaborative work."
+      "cl0ud may never be used to imply unilateral ownership over collaborative work.",
+      "Subsystems, products, and services follow the Apple-style inline glyph lockup: [☁] + [Subsystem Name] (e.g. ☁ Bedrock, ☁ Vertex, ☁ Borg, ☁ Breadcrumbs, ☁ Artifact) with optical spacing of 0.38-0.42x cap-height."
     ]
   },
   "founderIdentity": {
