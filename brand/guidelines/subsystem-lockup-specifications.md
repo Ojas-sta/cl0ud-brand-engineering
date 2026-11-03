@@ -18,38 +18,62 @@ In the cl0ud product ecosystem, services, hardware layers, and software products
 
 ```mermaid
 graph LR
-    Symbol[Official Infinity-Cloud Mark] --> Gap[Optical Gap: 0.38 - 0.42x Cap-Height]
-    Gap --> Word[Subsystem Name: Outfit / Space Grotesk]
+    Symbol[Official Infinity-Cloud Mark] --> Gap[Optical Gap: 0.18x Cap-Height]
+    Gap --> Word[Subsystem Name: SF Pro / Outfit Semi-Bold 600]
 ```
 
-### Optical Metrics & Spacing Formula
+### Optical Metrics & Spacing Formula (Empirical Apple Lockup Standard)
+
+Direct empirical pixel measurement from official `Pay` and `Card` assets establishes the golden lockup ratio:
 
 | Metric Parameter | Value / Formula | Description |
 | :--- | :--- | :--- |
-| **Cap-Height ($H$)** | Baseline reference | Height of capital letter (e.g., 'B' in Bedrock). |
-| **Symbol Height ($H_s$)** | $1.05 \times H$ | Symbol is scaled slightly larger than cap-height to compensate for circular curvature. |
-| **Symbol Width ($W_s$)** | $1.49 \times H_s$ | Preserves the native $608 : 408$ aspect ratio of the official infinity-cloud. |
-| **Horizontal Gap ($G$)** | $0.38 \text{ to } 0.42 \times H$ | Optical whitespace between the cloud symbol's rightmost edge and the text. |
-| **Baseline Alignment** | Exact $0\text{px}$ offset | The flat base stroke of the cloud anchors on the typographic baseline. |
-| **Tracking / Kerning** | `-0.02em` | Tight geometric letter-spacing matching high-end hardware interfaces. |
+| **Cap-Height ($H$)** | Baseline reference ($36\text{px}$ at $48\text{px}$ font) | Height of capital letter (e.g., 'C' in Card, 'B' in Bedrock). |
+| **Symbol Height ($H_s$)** | $1.05 \times H$ ($37.8\text{px}$) | Symbol is scaled slightly taller than cap-height to compensate for circular top curvature, matching Apple's leaf overshoot. |
+| **Symbol Width ($W_s$)** | $1.49 \times H_s$ ($55.3\text{px}$) | Preserves the native $608 : 408$ aspect ratio of the official infinity-cloud. |
+| **Kerning Gap ($G$)** | $0.18 \times H$ ($6.5\text{px}$) | **Ultra-tight optical whitespace** between the cloud symbol's rightmost curve and the first glyph. The symbol acts as an integral letterform. |
+| **Baseline Alignment** | Exact $0\text{px}$ offset | The flat base stroke of the infinity cloud rests squarely on the typographic baseline ($Y = 44.0\text{px}$). |
+| **Tracking / Kerning** | `-0.025em` to `-0.03em` | Apple's signature tight tracking, unifying the glyph mark and word into a single cohesive logo. |
+| **Background** | 100% Transparent | No outer containers, bounding boxes, or pill borders. Clean naked vector mark. |
 
 ---
 
 ## 2. Typographic Options
 
-### Primary Display Typeface: `Outfit`
-- **Weights:** Semi-Bold (`600`) for standard product locks; Bold (`700`) for hero banners.
-- **Why Outfit:** Clean geometric circular counters that resonate with the curves of the infinity-cloud mark.
+### Primary Display Typeface: `SF Pro Display` / `San Francisco`
+- **Font Stack:** `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Outfit", "Helvetica Neue", sans-serif`
+- **Weight:** Semi-Bold (`600`) for standard product locks; Bold (`700`) for large hero banners.
+- **Why SF Pro:** The exact typeface used in `Pay`, `Card`, `Music`, `Watch`, providing industry-defining legibility, geometric clarity, and unified Apple brand cohesion.
 
-### Secondary Architectural Typeface: `Space Grotesk`
-- **Weights:** Bold (`700`).
-- **Why Space Grotesk:** Technical, monospace-influenced flavor ideal for low-level systems (e.g. `☁ Borg`, `☁ Anthos`, `☁ Bigtable`).
+### Secondary Typeface: `Outfit`
+- **Weight:** Semi-Bold (`600`).
+- **Why Outfit:** Pure circular counters that directly resonate with the circular arcs of the infinity-cloud mark for web-embedded CSS environments.
 
 ---
 
 ## 3. Surface & Color Finish Variants
 
-### Style 1: Prismatic Titanium Gradient (Apple Card Style)
+### Style 1: Monochrome Black (Official Print & Light Mode)
+Matches the Apple Pay and Apple Card master brand references (`media_1793726232912_267067b2.png` and `media_1793726270646_008564db.png`):
+- **Symbol:** Solid Pure Black (`#000000`).
+- **Subsystem Name:** Solid Pure Black (`#000000`).
+- **Background:** 100% Transparent.
+- **Application:** White paper monographs, official letters, light-mode websites, physical silk-screening, and CNC engraving on light surfaces.
+
+### Style 2: Monochrome White (Official Dark Mode & Keynote)
+Matches the Apple Pay and Apple Card dark display references (`media_1793726252525_5f961845.png` and `media_1793726282836_a198e480.png`):
+- **Symbol:** Solid Pure White (`#FFFFFF`).
+- **Subsystem Name:** Solid Pure White (`#FFFFFF`).
+- **Background:** 100% Transparent.
+- **Application:** Dark-mode web interfaces, terminal dashboards, OLED mobile screens, keynote presentations, and matte obsidian acrylic plinths.
+
+### Style 3: Signature Electric Cyan (Hero Brand Identity)
+- **Symbol:** Electric Cyan gradient (`#00E5FF` to `#38BDF8`).
+- **Subsystem Name:** Crisp Cloud White (`#F8FAFC`).
+- **Background:** 100% Transparent.
+- **Application:** Master website headers, interactive 3D virtual floor plans, and digital twin navigation.
+
+### Style 4: Prismatic Titanium Gradient (Apple Card Style)
 Inspired by the iridescent finish of Apple Card (as seen in `assets/reference/apple-card-naming-reference.png`):
 - **Gradient Vector:**
   - $0\%$: `#C084FC` (Hyper Violet)
@@ -57,17 +81,7 @@ Inspired by the iridescent finish of Apple Card (as seen in `assets/reference/ap
   - $50\%$: `#FB923C` (Warm Titanium Gold)
   - $75\%$: `#FACC15` (Signal Amber)
   - $100\%$: `#38BDF8` (Sky Blue)
-- **Application:** Master keynotes, flagship exhibition placards, and primary website hero sections.
-
-### Style 2: Cybernetic Contrast (Electric Cyan + Cloud White)
-- **Symbol:** Electric Cyan gradient (`#00E5FF` to `#38BDF8`).
-- **Subsystem Name:** Crisp Cloud White (`#F8FAFC`).
-- **Background:** Deep Obsidian (`#0B0F19`) or pitch black (`#000000`).
-- **Application:** Dark-mode web interfaces, terminal status bars, and UI navigation drawers.
-
-### Style 3: Minimal Monochrome
-- **Symbol & Text:** Pure White (`#FFFFFF`) on dark surfaces, or Obsidian (`#0F172A`) on light surfaces.
-- **Application:** Laser-engraved CNC aluminum chassis, silkscreened PCBs, and white-paper academic monographs.
+- **Application:** Flagship exhibition placards and primary website hero sections.
 
 ---
 
