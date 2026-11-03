@@ -51,12 +51,20 @@
       "DPS Indirapuram Administration",
       "Makerspace Laboratory Safety Officers",
       "Unitree Robotics Open Source Community"
+    ],
+    "subsystems": [
+      "\u2601 Cloud",
+      "\u2601 Cloud.Kinematics",
+      "\u2601 Cloud.Caddy",
+      "\u2601 Cloud.Power",
+      "\u2601 Cloud.Perception",
+      "\u2601 Cloud.Cognition"
     ]
   },
   {
     "projectId": "PRJ-002",
-    "projectName": "DPSI Tech & Innovation Exhibition 3D Virtual Floor Plan & Live Anti-Cheat Voting System",
-    "projectDescription": "Photorealistic architectural 3D virtual floor plan and live exhibition voting web platform with a 4-layer anti-cheat security mechanism and fuzzy search across 35 project booths.",
+    "projectName": "DPSI Tech & Innovation Exhibition 2026 Virtual Platform & Live Anti-Cheat Voting System",
+    "projectDescription": "Photorealistic architectural 3D virtual exhibition digital twin and community voting web platform featuring Next.js 16 App Router, React Three Fiber (R3F) PBR rendering, 6-waypoint automated camera drone flight tour, procedural zero-dependency Web Audio synthesizer, client-side canvas delegate pass generator, and a 4-tier anti-cheat voting verification engine (ThumbmarkJS canvas/WebGL fingerprinting, salted IP SHA-256 hash rate-limiting, honeypots, signed session tokens).",
     "projectCategory": "Spatial Computing & 3D Web",
     "projectOwner": "DPS Indirapuram (DPSI)",
     "contributors": [
@@ -64,20 +72,28 @@
       "DPSI Exhibition Organizing Committee"
     ],
     "cl0udInvolvement": "Powered by",
-    "ojasSinghContribution": "Full-stack 3D scene architecture, PBR architectural material tuning (Carrara white floor, titanium plinths), Three.js camera rigs, Zustand state management, and 4-tier anti-cheat voting verification.",
+    "ojasSinghContribution": "Full-stack lead 3D web architect: procedural PBR Carrara floor & titanium plinth rendering, 6-waypoint camera drone tour autopilot, Web Audio API soundscape synthesis, HTML5 canvas delegate pass generator, and 4-tier anti-cheat voting security architecture.",
     "engineeringScope": [
-      "React Three Fiber (R3F) 3D architectural floor plan rendering",
-      "PBR materials, soft contact shadows, and celestial skybox tuning",
-      "4-layer anti-cheat voting engine (fingerprinting, IP rate-limiting, honeypots, session validation)",
+      "Next.js 16 App Router + React Three Fiber (R3F) 3D architectural digital twin rendering",
+      "PBR materials: Carrara white satin floor slabs, brushed titanium plinths, and soft directional daylighting",
+      "6-waypoint automated cinematic camera drone tour autopilot with Bezier easing",
+      "Zero-dependency procedural Web Audio API soundscape synthesizer with spatial audio panning",
+      "Client-side HTML5 canvas Innovation Delegate Pass ticket generator with QR code",
+      "4-layer anti-cheat voting verification engine (ThumbmarkJS entropy fingerprinting, salted IP SHA-256 hash, honeypot traps, signed ephemeral session tokens)",
       "Automated GitHub Actions CI/CD to Cloudflare Pages"
     ],
     "technologyStack": [
-      "Next.js (App Router)",
+      "Next.js 16",
+      "React 19",
       "TypeScript",
       "Three.js",
       "React Three Fiber (R3F)",
+      "Drei",
+      "Web Audio API",
+      "HTML5 Canvas",
+      "ThumbmarkJS",
       "Zustand",
-      "Framer Motion",
+      "Tailwind CSS",
       "Cloudflare Pages"
     ],
     "repositoryUrl": "https://github.com/Ojas-sta/dpsi-exhibition",
@@ -100,6 +116,14 @@
       "DPS Indirapuram Exhibition Committee",
       "Cloudflare Pages",
       "Three.js community"
+    ],
+    "subsystems": [
+      "\u2601 Expo",
+      "\u2601 Expo.Hall",
+      "\u2601 Expo.Tour",
+      "\u2601 Expo.Synth",
+      "\u2601 Expo.Pass",
+      "\u2601 Expo.Ballot"
     ]
   },
   {
@@ -143,6 +167,13 @@
     "projectAcknowledgements": [
       "Meta AI Research (JEPA team)",
       "Apple Machine Learning Research"
+    ],
+    "subsystems": [
+      "\u2601 WorldXD",
+      "\u2601 WorldXD.JEPA",
+      "\u2601 WorldXD.MPS",
+      "\u2601 WorldXD.IK",
+      "\u2601 WorldXD.Render"
     ]
   },
   {
@@ -184,39 +215,56 @@
     "projectAcknowledgements": [
       "School For Schools (s4s) Initiative",
       "DPS Indirapuram Innovation Lab"
+    ],
+    "subsystems": [
+      "\u2601 TinkerTek",
+      "\u2601 TinkerTek.I2C",
+      "\u2601 TinkerTek.RA4M1",
+      "\u2601 TinkerTek.Bridge",
+      "\u2601 TinkerTek.Docs"
     ]
   },
   {
     "projectId": "PRJ-005",
-    "projectName": "Autonomous Mobile Smart Dustbin with Target Tracking",
-    "projectDescription": "Smart robotic mobility base engineered to autonomously navigate indoor spaces, track human users or waste targets via computer vision, and maneuver dynamically to provide hands-free disposal access.",
+    "projectName": "BINZO \u2014 Smart Autonomous Mecanum Dustbin Robot",
+    "projectDescription": "Autonomous holonomic service robot platform powered by an M5Stack Core2 (ESP32) controller with a 320x240 capacitive touch dashboard. Features a 4WD Mecanum wheel vector drivetrain driven by an M5Module4EncoderMotor (I2C 0x24), autonomous dual TCRT5000 IR line patrol sensors (Port B GPIO 26/36), Kendryte K210 YOLOv2 person detection visual servoing via Port C UART2 (GPIO 13/14 at 115200 baud), motorized MG90S PWM mouth lid articulation with acoustic audio feedback, and a real-time UDP radio telemetry bridge.",
     "projectCategory": "Autonomous Service Robotics",
     "projectOwner": "Student Innovation Collaboration Project",
     "contributors": [
-      "Student Project Team (Core Mechanics & Enclosure)",
-      "Ojas Singh (Autonomous Navigation & Vision Tracking Advisor)"
+      "Ojas Singh (Lead Robotics & Systems Architect)",
+      "Student Mechatronics Innovation Team"
     ],
-    "cl0udInvolvement": "Technical assistance by",
-    "ojasSinghContribution": "Architectural guidance on differential drive kinematic control, optical target tracking with OpenCV, ultrasonic obstacle avoidance filtering, and power bus stability.",
+    "cl0udInvolvement": "Co-engineered by",
+    "ojasSinghContribution": "Full robot systems architecture: M5Core2 firmware, 4WD Mecanum holonomic inverse kinematics solver, M5Module4EncoderMotor I2C driver integration, Port B/C hardware pinout allocation, K210 YOLOv2 visual servoing UART pipeline, 320x240 touchscreen UI diagnostics, non-blocking FSM mission state machine, and UDP telemetry bridge.",
     "engineeringScope": [
-      "Target detection and centroid tracking algorithms via optical feed",
-      "Closed-loop PID motor velocity control for differential drive base",
-      "Sensor fusion with multi-directional ultrasonic distance sensors",
-      "Electrical safety and battery voltage regulation"
+      "4WD Mecanum wheel holonomic vector kinematics (forward, strafe, axial yaw)",
+      "I2C 4-channel motor encoder driver (M5Module4EncoderMotor at addr 0x24)",
+      "Port B dual TCRT5000 IR line patrol sensor integration (L26 / R36)",
+      "Port C UART2 high-speed communication with Kendryte K210 edge AI coprocessor",
+      "Closed-loop optical visual servoing for human approach and tracking",
+      "MG90S 50 Hz PWM servo lid mouth articulation with acoustic audio tones",
+      "Interactive 320x240 M5Core2 LCD dashboard (live WiFi, battery, IR status, motor invert, speed slider, E-STOP)",
+      "Non-blocking FSM mission sequence (Patrol -> Approach -> Open -> Dwell -> Close -> Return)",
+      "Bidirectional UDP JSON telemetry radio bridge for laptop monitoring and manual override"
     ],
     "technologyStack": [
-      "Python",
-      "OpenCV",
-      "Raspberry Pi / ESP32",
-      "L298N / TB6612FNG Motor Drivers",
-      "Ultrasonic Arrays"
+      "C++ / Arduino",
+      "PlatformIO",
+      "M5Stack Core2 (ESP32)",
+      "Kendryte K210 (M5StickV / UnitV)",
+      "MicroPython",
+      "YOLOv2 Tiny",
+      "I2C Protocol",
+      "UART Protocol",
+      "Python 3.11",
+      "UDP Sockets"
     ],
-    "repositoryUrl": "https://github.com/Ojas-sta/autonomous-smart-dustbin",
-    "documentationUrl": "documentation/engineering-portfolio.md#prj-005",
+    "repositoryUrl": "https://github.com/Ojas-sta/binzo-mecanum-robot",
+    "documentationUrl": "https://github.com/Ojas-sta/binzo-mecanum-robot#readme",
     "projectStatus": "In Development",
     "version": "0.8.0",
     "license": "MIT License (Open Hardware/Software Collaboration)",
-    "attributionRequirements": "Credit block: 'Project by Student Engineering Team | Technical Assistance by cl0ud & Ojas Singh'",
+    "attributionRequirements": "Mandatory credit: 'Powered by cl0ud | Co-engineered by Ojas Singh'",
     "thirdPartyDependencies": [
       "opencv-python",
       "numpy",
@@ -226,6 +274,17 @@
     "projectAcknowledgements": [
       "School Innovation Exhibition Panel",
       "Peer Hardware Collaborators"
+    ],
+    "subsystems": [
+      "\u2601 Binzo",
+      "\u2601 Binzo.Core",
+      "\u2601 Binzo.Holonomic",
+      "\u2601 Binzo.MotorDriver",
+      "\u2601 Binzo.Patrol",
+      "\u2601 Binzo.Sight",
+      "\u2601 Binzo.Mouth",
+      "\u2601 Binzo.Telemetry",
+      "\u2601 Binzo.FSM"
     ]
   },
   {
@@ -269,6 +328,13 @@
     "projectAcknowledgements": [
       "DPSI Biology & Environmental Sciences Department",
       "Peer Agricultural Builders"
+    ],
+    "subsystems": [
+      "\u2601 Hydro",
+      "\u2601 Hydro.Telemetry",
+      "\u2601 Hydro.Dosing",
+      "\u2601 Hydro.ADC",
+      "\u2601 Hydro.Sensors"
     ]
   },
   {
@@ -306,6 +372,73 @@
     "mediaAssets": [],
     "projectAcknowledgements": [
       "Google MediaPipe Research Team"
+    ],
+    "subsystems": [
+      "\u2601 SpatialOS",
+      "\u2601 SpatialOS.Hands",
+      "\u2601 SpatialOS.Pinch",
+      "\u2601 SpatialOS.Canvas"
+    ]
+  },
+  {
+    "projectId": "PRJ-008",
+    "projectName": "ESP32 SmartLock Access System",
+    "projectDescription": "Offline-first, dual-factor physical access controller merging a self-hosted Wi-Fi SoftAP authentication portal with an 8-pin 4x4 matrix keypad, 16x2 I2C character display, and 50 Hz hardware PWM servo door latch. Operates with zero router or internet connectivity by generating cryptographically fresh single-use One-Time Passcodes (OTPs) displayed on a responsive local dark-theme web portal and validated on a debounced physical keypad via a deterministic non-blocking finite state machine.",
+    "projectCategory": "Embedded Systems & Firmware",
+    "projectOwner": "cl0ud & Ojas Singh",
+    "contributors": [
+      "Ojas Singh (Lead Embedded & Hardware Systems Architect)"
+    ],
+    "cl0udInvolvement": "Co-engineered by",
+    "ojasSinghContribution": "Complete hardware architecture, Infrastructure-as-Circuit (IAC) pinout allocation, non-blocking millis() FSM design, debounced 4x4 matrix keypad scanning, I2C 16x2 LCD driver integration, 50 Hz hardware LEDC PWM servo latch control, self-hosted SoftAP HTTP server implementation, dynamic OTP generation logic, and isolated power decoupling design.",
+    "engineeringScope": [
+      "Self-contained Wi-Fi SoftAP portal ('ESP32-SmartLock', 192.168.4.1) serving responsive dark-theme UI directly from MCU flash",
+      "Dynamic single-use 4-digit OTP generation (1000-9999) with automatic expiration and regeneration",
+      "8-pin 4x4 matrix keypad debounced scanner across 8 GPIOs (R1:13, R2:32, R3:33, R4:25, C1:26, C2:27, C3:14, C4:12)",
+      "I2C 16x2 character LCD driver at address 0x27 on GPIO 21 (SDA) / GPIO 22 (SCL)",
+      "50 Hz hardware LEDC PWM servo door latch controller on GPIO 18 (0 deg Locked <-> 90 deg Unlocked)",
+      "Pure non-blocking millis() finite state machine (zero delay() calls in loop())",
+      "Isolated 5V 2A power rail with bulk electrolytic (100uF) and ceramic (0.1uF) decoupling capacitors to prevent brownouts"
+    ],
+    "technologyStack": [
+      "C++",
+      "Arduino C",
+      "ESP32 Dev Module (WROOM-32)",
+      "WiFi SoftAP",
+      "WebServer",
+      "LiquidCrystal_I2C",
+      "Hardware LEDC PWM",
+      "I2C Bus Protocol",
+      "HTML5 / CSS3 (Embedded Flash)"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/cl0ud-brand-engineering",
+    "documentationUrl": "https://github.com/Ojas-sta/cl0ud-brand-engineering#readme",
+    "projectStatus": "Completed",
+    "version": "1.0.0",
+    "license": "MIT License",
+    "attributionRequirements": "Mandatory credit: 'Powered by cl0ud | Co-engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "WiFi.h",
+      "WebServer.h",
+      "Wire.h",
+      "LiquidCrystal_I2C.h"
+    ],
+    "mediaAssets": [
+      "assets/diagrams/smartlock-architecture.svg"
+    ],
+    "projectAcknowledgements": [
+      "Espressif Systems Open Source Community",
+      "Makerspace Hardware Community"
+    ],
+    "subsystems": [
+      "\u2601 Access",
+      "\u2601 Access.Portal",
+      "\u2601 Access.OTP",
+      "\u2601 Access.Keypad",
+      "\u2601 Access.Latch",
+      "\u2601 Access.Feedback",
+      "\u2601 Access.FSM",
+      "\u2601 Access.IAC"
     ]
   }
 ]

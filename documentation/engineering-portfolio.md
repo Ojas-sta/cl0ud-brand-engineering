@@ -14,9 +14,10 @@
 2. [`PRJ-002: DPSI Exhibition 3D Virtual Floor Plan & Voting Web App`](#prj-002-dpsi-tech--innovation-exhibition-3d-virtual-floor-plan--live-voting-system)
 3. [`PRJ-003: WorldXD JEPA-WMS Robotic Arm Simulation Engine`](#prj-003-worldxd-jepa-wms-real-time-robotic-arm-simulation-platform)
 4. [`PRJ-004: DPSI TinkerTek Open-Source Firmware & Agentic OS`](#prj-004-dpsi-tinkertek-open-source-firmware--agentic-os)
-5. [`PRJ-005: Autonomous Mobile Smart Dustbin with Target Tracking`](#prj-005-autonomous-mobile-smart-dustbin-with-target-tracking)
+5. [`PRJ-005: BINZO Smart Autonomous Mecanum Dustbin Robot`](#prj-005-binzo--smart-autonomous-mecanum-dustbin-robot)
 6. [`PRJ-006: Automated Hydroponic Farming Environmental IoT System`](#prj-006-automated-hydroponic-farming-environmental-iot-system)
 7. [`PRJ-007: Spatial-OS & Vision-Track Web Gesture Computing`](#prj-007-spatial-os--vision-track-web-based-spatial-computing-environment)
+8. [`PRJ-008: ESP32 SmartLock Access System`](#prj-008-esp32-smartlock-access-system)
 
 ---
 
@@ -65,24 +66,27 @@ flowchart TD
 
 ---
 
-## PRJ-002: DPSI Tech & Innovation Exhibition 3D Virtual Floor Plan & Live Voting System
+## PRJ-002: DPSI Tech & Innovation Exhibition 3D Virtual Floor Plan & Live Anti-Cheat Voting Platform
 
 [![Status: Active](https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge)](https://dpsiexibition.pages.dev)
-[![Stack](https://img.shields.io/badge/Stack-Next.js%20%7C%20Three.js%20%7C%20R3F-0071E3?style=for-the-badge)](https://github.com/Ojas-sta/dpsi-exhibition)
+[![Stack](https://img.shields.io/badge/Stack-Next.js%2016%20%7C%20Three.js%20%7C%20R3F-0071E3?style=for-the-badge)](https://github.com/Ojas-sta/dpsi-exhibition)
 
 ### 1. Project Overview & Problem Statement
-Physical school exhibitions struggle with visitor orientation, booth congestion, and rigged voting for student awards. DPSI needed an interactive 3D digital twin of the exhibition concourse paired with a secure, tamper-proof live voting engine that prevents ballot stuffing.
+Physical exhibitions struggle with visitor navigation across complex booths, orientation fatigue, and manipulated community voting. DPSI needed an interactive 3D digital twin of the exhibition concourse paired with an automated cinematic tour, procedural Web Audio soundscape, dynamic visitor credential pass generation, and a tamper-proof 4-tier anti-cheat voting verification pipeline.
 
-### 2. Engineering Solution
-- **Photorealistic Architectural 3D Scene:** Built with Next.js App Router, Three.js, and React Three Fiber (R3F). Features Carrara white satin floor slabs (roughness $0.48$, metalness $0.20$), smooth celestial skyboxes, brushed titanium plinths, and warm directional daylight without shadow acne.
-- **4-Layer Anti-Cheat Voting Engine:**
-  1. *Canvas/WebGL Device Fingerprinting:* Detects repeat voter browsers across private windows.
-  2. *IP Entropy Rate-Limiting:* Prevents automated script floods.
-  3. *Honeypot Form Traps:* Catches headless browser bots.
-  4. *Cryptographic Session Tokens:* Signed ephemeral tokens required to cast verified votes.
+### 2. Engineering Solution & Subsystems Breakdown
+- **`☁ Expo.Hall` (Photorealistic 3D Scene):** Built with Next.js 16 App Router, Three.js, and React Three Fiber (R3F). Renders Carrara white satin floor slabs (roughness $0.48$, metalness $0.20$), smooth celestial skyboxes, brushed titanium project plinths, and soft directional daylighting across 35 project booths.
+- **`☁ Expo.Tour` (6-Waypoint Drone Tour):** Automated camera drone autopilot interpolating between 6 key architectural waypoints across the hall with Bezier velocity smoothing.
+- **`☁ Expo.Synth` (Zero-Dependency Web Audio Synth):** Procedural ambient soundscape generated natively in browser via Web Audio API, featuring dynamic frequency modulation and binaural spatial panning without loading external audio files.
+- **`☁ Expo.Pass` (Canvas Innovation Delegate Pass):** Dynamic client-side HTML5 canvas pass modal generating personalized high-resolution visitor badges with attendee credentials and QR validation codes.
+- **`☁ Expo.Ballot` (4-Tier Anti-Cheat Voting Engine):**
+  1. *Hardware Entropy Device Fingerprinting:* ThumbmarkJS canvas/WebGL/audio context entropy hashing.
+  2. *IP Entropy Rate-Limiting:* Salted client IP SHA-256 hash rate-limiting (1 vote per booth per device).
+  3. *Honeypot Form Traps:* Catches headless browser automation bots.
+  4. *Cryptographic Session Tokens:* Signed ephemeral tokens required to submit ballot transactions.
 
 ### 3. Verified Contributions
-- **Ojas Singh (Lead Web Architect & 3D Developer):** Full 3D scene architecture, PBR shader tuning, Three.js camera transitions, Zustand state management, anti-cheat engine, and Cloudflare Pages CI/CD pipeline.
+- **Ojas Singh (Lead Web Architect & 3D Developer):** Full 3D scene architecture, PBR shader tuning, Three.js camera transitions, Zustand state management, Web Audio synthesizer, canvas pass generator, anti-cheat engine, and Cloudflare Pages CI/CD pipeline.
 - **DPSI Organizing Committee:** Booth coordinates, student roster mapping, award categories.
 
 ### 4. Attribution & License
@@ -90,6 +94,7 @@ Physical school exhibitions struggle with visitor orientation, booth congestion,
 - **License:** MIT License (Web Core) & DPSI Institutional Assets.
 - **Live Deployment:** [`https://dpsiexibition.pages.dev`](https://dpsiexibition.pages.dev)
 - **Repository:** [`https://github.com/Ojas-sta/dpsi-exhibition`](https://github.com/Ojas-sta/dpsi-exhibition)
+- **Subsystem Composition:** `☁ Expo.Hall`, `☁ Expo.Tour`, `☁ Expo.Synth`, `☁ Expo.Pass`, `☁ Expo.Ballot`
 
 ---
 
@@ -137,36 +142,37 @@ Educational robotics platforms (e.g. School For Schools / s4s ICRobot and ICBric
 
 ---
 
-## PRJ-005: Autonomous Mobile Smart Dustbin with Target Tracking
+## PRJ-005: BINZO — Smart Autonomous Mecanum Dustbin Robot
 
-[![Status: In Development](https://img.shields.io/badge/Status-In%20Development-F59E0B?style=for-the-badge)](https://github.com/Ojas-sta)
-[![Role](https://img.shields.io/badge/Role-Technical%20Assistance-00E5FF?style=for-the-badge)](file:///Users/roopalisingh/Desktop/cl0ud/cl0ud-brand-spec.json)
+[![Status: Active](https://img.shields.io/badge/Status-Active-10B981?style=for-the-badge)](https://github.com/Ojas-sta)
+[![Role](https://img.shields.io/badge/Role-Co--Engineered-00E5FF?style=for-the-badge)](file:///Users/roopalisingh/Desktop/cl0ud/cl0ud-brand-spec.json)
 
 ### 1. Project Overview & Problem Statement
-Static waste bins in crowded makerspaces or school cafeterias require users to leave their workbenches, leading to accumulated debris and hazardous waste on tables. The Autonomous Mobile Smart Dustbin project is an intelligent robotic mobility base engineered to detect, track, and navigate toward users for hands-free waste disposal.
+Static waste bins in busy makerspaces or exhibition halls require visitors to search for disposal points, causing waste buildup. BINZO is an autonomous holonomic service robot platform designed to patrol autonomously, track humans via edge AI vision, navigate directly toward users, and present an articulated motorized waste mouth.
 
-### 2. Engineering Solution & Technical Assistance
-- **Computer Vision Target Tracking:** Uses an onboard optical camera feed processed through OpenCV to detect human target bounding boxes or hand gestures, calculating centroid error offsets in real time.
-- **Differential Drive Kinematics:** Closed-loop PID velocity control directing dual DC gearmotors to steer dynamically toward the target while maintaining a safe $0.5\text{m}$ interaction buffer.
-- **Ultrasonic Collision Ring:** 3-way ultrasonic sensor array interrupting motor drive if peripheral obstacles enter the trajectory path.
+### 2. Engineering Solution & Hardware Interconnect
+- **`☁ Binzo.Core` (M5Stack Core2 Supervisor):** ESP32-D0WDQ6-V3 dual-core host with a $320\times 240$ capacitive touch LCD dashboard displaying live WiFi SSID, battery voltage, active mission state (`LINE_PATROL`, `APPROACH`, `OPEN_MOUTH`), IR diagnostic cards, motor inversion toggles, speed sliders, and hardware E-STOP.
+- **`☁ Binzo.Holonomic` (4WD Mecanum Vector Drivetrain):** 4-wheel independent vector kinematics driven over I2C by an M5Module4EncoderMotor (address `0x24`), delivering omnidirectional forward, lateral strafe, and zero-radius axial yaw locomotion.
+- **`☁ Binzo.Patrol` (Dual TCRT5000 IR Patrol Array):** Line following sensors on Port B (Left: GPIO 26, Right: GPIO 36) executing high-speed ground tracking.
+- **`☁ Binzo.Sight` (Edge AI Visual Servoing):** M5StickV / UnitV coprocessor (Kendryte K210 RISC-V with KPU) running onboard YOLOv2 Tiny person detection. Connected via Port C UART2 (GPIO 13/14 at 115200 baud) to feed target centroid error offsets into proportional steering loops.
+- **`☁ Binzo.Mouth` (Articulated Lid Servo):** MG90S micro-servo ($0^\circ \rightleftarrows 95^\circ$) opening automatically on human approach with acoustic chime audio feedback.
+- **`☁ Binzo.Telemetry` (UDP Radio Bridge):** Asynchronous telemetry bridge (`binzo/laptop_controller/radio_bridge.py`) for live laptop telemetry inspection and manual joystick override.
 
 ```mermaid
-flowchart LR
-    Cam[Optical Camera] --> Vision[OpenCV Centroid Tracking]
-    Vision --> Error[Lateral & Depth Error Offset]
-    Error --> PID[Differential Drive PID Controller]
-    PID --> Motors[TB6612FNG Motor Drivers & Wheels]
-    Sensors[Ultrasonic Array] -.->|Obstacle Interrupt| PID
+flowchart TD
+    Patrol[AUTO_LINE_PATROL: Dual TCRT5000 IR Port B] -->|Person Detected by K210| Approach[AUTO_APPROACH_PERSON: Visual Servoing]
+    Approach -->|Distance Thresh| Mouth[AUTO_OPEN_MOUTH: MG90S 95° + Welcome Chime]
+    Mouth --> Dwell[AUTO_AWAIT_TRASH: 5s Dwell Countdown]
+    Dwell --> Close[AUTO_CLOSE_MOUTH: 0° + Thank You Tone]
+    Close --> Return[AUTO_RETURN_LINE: Reverse Backtrack & Reacquire]
+    Return --> Patrol
 ```
 
 ### 3. Verified Contributions & Attribution Separation
-- **Student Project Authors:** Core mechanical chassis fabrication, dustbin lid opening servo mechanism, and physical enclosure styling.
-- **Ojas Singh / cl0ud (Technical Assistance & Advisory):** 
-  - Advised on closed-loop PID kinematic steering equations.
-  - Resolved motor driver voltage drop issues by implementing an isolated $7.4\text{V}$ battery rail.
-  - Implemented OpenCV optical centroid tracking pipeline.
-- **Attribution:** `"Project by Student Innovation Team | Technical Assistance by cl0ud & Ojas Singh"`
-- **Ownership Note:** The mechanical design, dustbin enclosure, and intellectual property remain 100% the property of the student project team.
+- **Ojas Singh (Lead Robotics & Systems Architect):** Full robot systems architecture: M5Core2 firmware, 4WD Mecanum holonomic inverse kinematics solver, M5Module4EncoderMotor I2C driver integration, Port B/C hardware pinout allocation, K210 YOLOv2 visual servoing UART pipeline, 320x240 touchscreen UI diagnostics, non-blocking FSM mission state machine, and UDP telemetry bridge.
+- **Mechatronics Innovation Team:** Physical chassis cutting, bin barrel mounting, battery bracket fabrication.
+- **Attribution:** `"Powered by cl0ud | Co-engineered by Ojas Singh"`
+- **Subsystem Composition:** `☁ Binzo.Core`, `☁ Binzo.Holonomic`, `☁ Binzo.MotorDriver`, `☁ Binzo.Patrol`, `☁ Binzo.Sight`, `☁ Binzo.Mouth`, `☁ Binzo.Telemetry`, `☁ Binzo.FSM`
 
 ---
 
@@ -222,3 +228,88 @@ Apple Vision Pro introduced fluid, natural spatial pinch gestures, but requires 
 - **Attribution:** `"Created by cl0ud | Engineered by Ojas Singh"`
 - **License:** MIT License.
 - **Repository:** [`https://github.com/Ojas-sta/Spatial-OS`](https://github.com/Ojas-sta/Spatial-OS)
+
+---
+
+## PRJ-008: ESP32 SmartLock Access System
+
+[![Powered by cl0ud](https://img.shields.io/badge/Powered%20by-cl0ud-00E5FF?style=for-the-badge&logoColor=0B0F19&labelColor=0B0F19)](https://github.com/Ojas-sta/cl0ud-brand-engineering)
+[![Co-engineered by Ojas Singh](https://img.shields.io/badge/Co--engineered%20by-Ojas%20Singh-1E3A8A?style=for-the-badge&logoColor=white&labelColor=0B0F19)](https://github.com/Ojas-sta)
+
+### 1. Project Overview & Problem Statement
+Commercial smart locks often require proprietary cloud backends, continuous external Wi-Fi router connectivity, or vulnerability-prone mobile app Bluetooth syncs. In offline environments, school laboratories, or secure server cabinets, access control must operate with zero internet dependencies while maintaining cryptographically fresh, verifiable authentication.
+
+The **ESP32 SmartLock Access System** is an offline-first, dual-factor physical access controller. It merges a **self-hosted Wi-Fi authentication portal** with a **hardware matrix keypad**, **I2C character display**, and **50 Hz PWM servo door latch**.
+
+### 2. System Architecture & Flow
+
+```
+                  +----------------------------------------------------------+
+                  |                     ESP32 Dev Module                     |
+                  |                                                          |
+ [Smartphone/PC]  |  +--------------------+               +---------------+  |
+        |         |  |   Wi-Fi SoftAP     |               | Dynamic OTP   |  |
+        +========>|  | "ESP32-SmartLock"  |-------------->| Generator     |  |
+    (HTTP :80)    |  |  (192.168.4.1)     |               | (1000 - 9999) |  |
+                  |  +--------------------+               +-------+-------+  |
+                  |                                               |          |
+                  |  +--------------------+                       v          |
+ [HX543 Keypad] --+->| Keypad Scanner     |================ [OTP Match?]     |
+ (8-pin Matrix)   |  | (Debounced Matrix) |                       |          |
+                  |  +--------------------+                       |          |
+                  |                                               |          |
+                  |  +--------------------+                       | YES      |
+ [16x2 I2C LCD] <-+--| LiquidCrystal_I2C  |<----------------------+          |
+   (GPIO 21/22)   |  | Real-Time Feedback |                       v          |
+                  |  +--------------------+               +---------------+  |
+                  |                                       | Hardware PWM  |--+-> [Door Servo]
+                  |                                       | Actuator (18) |      (0° ⇄ 90°)
+                  +---------------------------------------+---------------+--+
+```
+
+### 3. Hardware Interconnect & Final Pinout
+
+All pins were empirically validated through hardware bus diagnostics:
+
+| Subsystem Lockup | Component Pin | ESP32 GPIO | Interface Type | Role |
+| :--- | :--- | :--- | :--- | :--- |
+| `[☁] Access • Feedback` | LCD SDA | **GPIO 21** | I2C (Bus addr `0x27`) | Data line for $16\times 2$ character display |
+| `[☁] Access • Feedback` | LCD SCL | **GPIO 22** | I2C (Bus addr `0x27`) | Clock line for $16\times 2$ character display |
+| `[☁] Access • Latch` | Servo PWM | **GPIO 18** | 50 Hz Hardware LEDC PWM | $0^\circ$ (Locked) $\rightleftarrows$ $90^\circ$ (Unlocked) |
+| `[☁] Access • Keypad` | Pin 1 (R1) | **GPIO 13** | Matrix Row 1 | Keys `1`, `2`, `3`, `A` |
+| `[☁] Access • Keypad` | Pin 2 (C4) | **GPIO 12** | Matrix Col 4 | Keys `A`, `B`, `C`, `D` |
+| `[☁] Access • Keypad` | Pin 3 (C3) | **GPIO 14** | Matrix Col 3 | Keys `3`, `6`, `9`, `#` |
+| `[☁] Access • Keypad` | Pin 4 (C2) | **GPIO 27** | Matrix Col 2 | Keys `2`, `5`, `8`, `0` |
+| `[☁] Access • Keypad` | Pin 5 (C1) | **GPIO 26** | Matrix Col 1 | Keys `1`, `4`, `7`, `*` |
+| `[☁] Access • Keypad` | Pin 6 (R4) | **GPIO 25** | Matrix Row 4 | Keys `*`, `0`, `#`, `D` |
+| `[☁] Access • Keypad` | Pin 7 (R3) | **GPIO 33** | Matrix Row 3 | Keys `7`, `8`, `9`, `C` |
+| `[☁] Access • Keypad` | Pin 8 (R2) | **GPIO 32** | Matrix Row 2 | Keys `4`, `5`, `6`, `B` |
+
+### 4. Operational Flow & Finite State Machine
+
+```
+[Web Portal] ──> Displays 4-digit OTP & "LOCKED" status
+      │
+      ▼
+[User Entry] ──> Types digits on 4x4 keypad (LCD echoes digits)
+      │
+      ├── [* Key] ──> Clears input buffer & resets prompt
+      │
+      └── [# Key] ──> Submits code for validation
+            │
+            ├── INVALID ──> LCD displays "Invalid OTP! Try Again..."
+            │
+            └── VALID ────> 1. LCD displays "Access Granted! Door Unlocked"
+                            2. Servo rotates to 90° (Latch opens)
+                            3. Web portal badge updates to "UNLOCKED"
+                            4. 5-second non-blocking countdown triggers
+                            5. Servo returns to 0° (Auto-relocks)
+                            6. Fresh OTP is automatically generated
+```
+
+### 5. Verified Contributions & Attribution
+- **Ojas Singh (Lead Embedded & Hardware Systems Architect):** Complete hardware architecture, Infrastructure-as-Circuit (IAC) pinout allocation, non-blocking `millis()` FSM design, debounced 4x4 matrix keypad scanning, I2C 16x2 LCD driver integration, 50 Hz hardware LEDC PWM servo latch control, self-hosted SoftAP HTTP server implementation, dynamic OTP generation logic, and isolated power decoupling design.
+- **Attribution:** `"Powered by cl0ud | Co-engineered by Ojas Singh"`
+- **Subsystem Composition:** `☁ Access.Portal`, `☁ Access.OTP`, `☁ Access.Keypad`, `☁ Access.Latch`, `☁ Access.Feedback`, `☁ Access.FSM`, `☁ Access.IAC`
+- **Repository:** [`https://github.com/Ojas-sta/cl0ud-brand-engineering`](https://github.com/Ojas-sta/cl0ud-brand-engineering)
+

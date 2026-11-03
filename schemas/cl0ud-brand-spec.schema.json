@@ -768,6 +768,11 @@
         "projectAcknowledgements": {
           "type": "array",
           "items": { "type": "string" }
+        },
+        "subsystems": {
+          "type": "array",
+          "description": "Architectural cl0ud subsystems and hierarchical nested sub-subsystems comprising this project",
+          "items": { "type": "string" }
         }
       }
     }

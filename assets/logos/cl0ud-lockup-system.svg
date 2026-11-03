@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" fill="none">
-  <!-- cl0ud Apple-Style Subsystem Lockup System Specification -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 960" width="1000" height="960" fill="none">
+  <!-- cl0ud Apple-Style Subsystem Lockup System Specification (Expanded for Hierarchical & Embedded IAC) -->
   <defs>
     <!-- Prismatic Titanium Gradient (Apple Card Style Reference) -->
     <linearGradient id="appleCardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -23,63 +23,93 @@
   </defs>
 
   <!-- Background Canvas -->
-  <rect width="1000" height="700" fill="#0B0F19"/>
-  <rect x="20" y="20" width="960" height="660" rx="16" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1000" height="960" fill="#0B0F19"/>
+  <rect x="20" y="20" width="960" height="920" rx="16" stroke="#1E293B" stroke-width="1.5"/>
 
   <!-- Section Header -->
-  <text x="60" y="70" font-family="'Outfit', 'Space Grotesk', system-ui, sans-serif" font-size="20" font-weight="700" fill="#00E5FF" letter-spacing="0.05em">CL0UD SUBSYSTEM BRAND LOCKUP SPECIFICATION</text>
-  <text x="60" y="94" font-family="'JetBrains Mono', monospace" font-size="12" fill="#64748B">Ratio: Height = 1.05 × Cap-Height | Gap = 0.40 × Cap-Height | Typography: Outfit 600 / Space Grotesk</text>
+  <text x="60" y="65" font-family="'Outfit', 'Space Grotesk', system-ui, sans-serif" font-size="20" font-weight="700" fill="#00E5FF" letter-spacing="0.05em">CL0UD SUBSYSTEM BRAND LOCKUP SPECIFICATION</text>
+  <text x="60" y="88" font-family="'JetBrains Mono', monospace" font-size="12" fill="#64748B">Single Subsystems &amp; Hierarchical Nested Subsystems (Subsystems inside Subsystems)</text>
+  <text x="60" y="108" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">Metrics: Height = 1.05 × Cap-Height | Optical Gap = 0.40 × Cap-Height | Delimiter = • (U+2022)</text>
 
   <!-- Line Divider -->
-  <line x1="60" y1="115" x2="940" y2="115" stroke="#1E293B" stroke-width="1"/>
+  <line x1="60" y1="125" x2="940" y2="125" stroke="#1E293B" stroke-width="1"/>
 
   <!-- ==================== EXAMPLE 1: PRISMATIC TITANIUM (Apple Card Style) ==================== -->
   <g transform="translate(60, 150)">
-    <rect width="880" height="130" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
-    <text x="30" y="30" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">01. PRISMATIC TITANIUM STYLE (Reference: Apple Card)</text>
+    <rect width="880" height="150" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
+    <text x="30" y="28" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">01. PRISMATIC TITANIUM STYLE (Reference: Apple Card Hero Architecture)</text>
     
-    <!-- Lockup: [☁] Card / [☁] Bedrock -->
-    <g transform="translate(40, 50)" fill="url(#appleCardGrad)">
-      <!-- Cloud Logo: Height = 56px, Scale = 56/408 = 0.137 -->
+    <!-- Lockup: [☁] Bedrock -->
+    <g transform="translate(40, 52)" fill="url(#appleCardGrad)">
       <use href="#cloud-symbol" transform="scale(0.137)"/>
-      <!-- Text: Cap Height ~ 54px -->
       <text x="105" y="47" font-family="'Outfit', 'SF Pro Display', -apple-system, sans-serif" font-size="64" font-weight="600" letter-spacing="-0.025em">Bedrock</text>
     </g>
 
-    <text x="460" y="78" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">Platform: Isolated Power &amp; Bus Topology</text>
-    <text x="460" y="96" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00E5FF">Designation: ☁ Bedrock</text>
+    <text x="460" y="75" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">Platform: Isolated Multi-Rail Power &amp; Buck Topology</text>
+    <text x="460" y="93" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00E5FF">Designation: ☁ Bedrock</text>
+    <text x="460" y="111" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">Scope: Quadruped 28.8V -> 12V / 5V / 3.3V Step-Down Architecture</text>
   </g>
 
-  <!-- ==================== EXAMPLE 2: ELECTRIC CYAN & WHITE (High Contrast Tech) ==================== -->
-  <g transform="translate(60, 310)">
-    <rect width="880" height="130" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
-    <text x="30" y="30" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">02. CYBERNETIC CONTRAST STYLE (Electric Cyan + Cloud White)</text>
+  <!-- ==================== EXAMPLE 2: INFRASTRUCTURE AS CIRCUIT (IAC & Wiring) ==================== -->
+  <g transform="translate(60, 325)">
+    <rect width="880" height="150" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
+    <text x="30" y="28" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">02. INFRASTRUCTURE-AS-CIRCUIT &amp; WIRING AUTOMATION (Hardware-as-Code)</text>
     
-    <!-- Lockup: [☁ in Cyan] Vertex -->
-    <g transform="translate(40, 50)">
+    <!-- Lockup: [☁ in Cyan] Wireframe -->
+    <g transform="translate(40, 52)">
       <use href="#cloud-symbol" transform="scale(0.137)" fill="url(#cyanGrad)"/>
-      <text x="105" y="47" font-family="'Outfit', 'Space Grotesk', system-ui, sans-serif" font-size="64" font-weight="700" fill="#F8FAFC" letter-spacing="-0.02em">Vertex</text>
+      <text x="105" y="47" font-family="'Outfit', 'Space Grotesk', system-ui, sans-serif" font-size="64" font-weight="700" fill="#F8FAFC" letter-spacing="-0.02em">Wireframe</text>
     </g>
 
-    <text x="460" y="78" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">Platform: Closed-Form Inverse Kinematics Engine</text>
-    <text x="460" y="96" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00E5FF">Designation: ☁ Vertex</text>
+    <text x="500" y="75" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">Platform: Declarative Pinout Compiler &amp; Netlist Assertions</text>
+    <text x="500" y="93" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00E5FF">Designation: ☁ Wireframe</text>
+    <text x="500" y="111" font-family="'JetBrains Mono', monospace" font-size="10" fill="#475569">Scope: YAML/JSON -> pins.h, strapping pin conflict checks, level shifting</text>
   </g>
 
-  <!-- ==================== EXAMPLE 3: MINIMAL MONOCHROME (Documentation & Chassis) ==================== -->
-  <g transform="translate(60, 470)">
-    <rect width="880" height="130" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
-    <text x="30" y="30" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">03. MONOCHROME MINIMAL (CNC Chassis &amp; Monograph Headers)</text>
+  <!-- ==================== EXAMPLE 3: HIERARCHICAL LOCKUP — SMARTLOCK LATCH ==================== -->
+  <g transform="translate(60, 500)">
+    <rect width="880" height="175" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
+    <text x="30" y="28" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">03. HIERARCHICAL LOCKUP: ESP32 SMARTLOCK ACCESS SYSTEM (Nested Subsystem)</text>
     
-    <!-- Lockup: [☁ in White] Borg -->
-    <g transform="translate(40, 50)">
-      <use href="#cloud-symbol" transform="scale(0.137)" fill="#FFFFFF"/>
-      <text x="105" y="47" font-family="'Outfit', -apple-system, sans-serif" font-size="64" font-weight="600" fill="#FFFFFF" letter-spacing="-0.02em">Borg</text>
+    <!-- Lockup: [☁] Access • Latch -->
+    <g transform="translate(40, 52)">
+      <use href="#cloud-symbol" transform="scale(0.137)" fill="url(#cyanGrad)"/>
+      <text x="105" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="60" font-weight="600" fill="#F8FAFC" letter-spacing="-0.02em">Access</text>
+      <!-- Delimiter • -->
+      <text x="330" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="60" font-weight="700" fill="#00E5FF"> • </text>
+      <!-- Child Subsystem -->
+      <text x="385" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="52" font-weight="500" fill="#94A3B8" letter-spacing="-0.01em">Latch</text>
     </g>
 
-    <text x="460" y="78" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B">Platform: Distributed Process Supervisor &amp; Watchdog</text>
-    <text x="460" y="96" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00E5FF">Designation: ☁ Borg</text>
+    <!-- Technical Specs Box -->
+    <path d="M 40 120 L 840 120" stroke="#1E293B" stroke-width="1"/>
+    <text x="40" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38BDF8">Parent Domain: ☁ Access (Physical Control)</text>
+    <text x="340" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#F8FAFC">Child: ☁ Access.Latch (GPIO 18 | 50Hz LEDC PWM | 0° ⇄ 90°)</text>
+    <text x="40" y="162" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Peers: ☁ Access.Portal (SoftAP 192.168.4.1) | ☁ Access.OTP (1000-9999) | ☁ Access.Keypad (4x4 Matrix)</text>
+  </g>
+
+  <!-- ==================== EXAMPLE 4: HIERARCHICAL LOCKUP — BINZO MECANUM ==================== -->
+  <g transform="translate(60, 700)">
+    <rect width="880" height="175" rx="12" fill="#030712" stroke="#1F2937" stroke-width="1"/>
+    <text x="30" y="28" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">04. HIERARCHICAL LOCKUP: BINZO AUTONOMOUS ROBOT (Mecanum Kinematics)</text>
+    
+    <!-- Lockup: [☁] Binzo • Holonomic -->
+    <g transform="translate(40, 52)">
+      <use href="#cloud-symbol" transform="scale(0.137)" fill="url(#cyanGrad)"/>
+      <text x="105" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="60" font-weight="600" fill="#F8FAFC" letter-spacing="-0.02em">Binzo</text>
+      <!-- Delimiter • -->
+      <text x="275" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="60" font-weight="700" fill="#00E5FF"> • </text>
+      <!-- Child Subsystem -->
+      <text x="330" y="47" font-family="'Outfit', system-ui, sans-serif" font-size="52" font-weight="500" fill="#94A3B8" letter-spacing="-0.01em">Holonomic</text>
+    </g>
+
+    <!-- Technical Specs Box -->
+    <path d="M 40 120 L 840 120" stroke="#1E293B" stroke-width="1"/>
+    <text x="40" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38BDF8">Parent Domain: ☁ Binzo (Autonomous Service Robot)</text>
+    <text x="380" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#F8FAFC">Child: ☁ Binzo.Holonomic (4WD Mecanum Vector Kinematics)</text>
+    <text x="40" y="162" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">Peers: ☁ Binzo.MotorDriver (I2C 0x24) | ☁ Binzo.Patrol (IR Port B) | ☁ Binzo.Sight (K210 UART2 Port C)</text>
   </g>
 
   <!-- Footer Blueprint Grid Guides Note -->
-  <text x="60" y="650" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">Optical Alignment: Baseline of font matches bottom anchor of infinity-cloud symbol. Kerning offset dx = 22px at 64px font size.</text>
+  <text x="60" y="910" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">cl0ud Subsystem Architecture Standard: All lockups preserve 1.05x cap-height symbol scaling and 0.40x cap-height optical kerning.</text>
 </svg>
