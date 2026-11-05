@@ -440,5 +440,68 @@
       "\u2601 Access.FSM",
       "\u2601 Access.IAC"
     ]
+  },
+  {
+    "projectId": "PRJ-009",
+    "projectName": "Edge-AI Smart Traffic Light Controller & Simulator",
+    "projectDescription": "Deterministic, edge-AI computer-vision-driven traffic priority controller replacing static timers and black-box reinforcement learning models. Deployed on Raspberry Pi 4B (Picamera2) and Docker containers, featuring an end-to-end Virtual Camera and 4-way intersection simulator, dynamic Passenger Car Unit (PCU) density timing, automated pedestrian queue cutoff, emergency vehicle green corridors, and IoU collision detection with automated emergency dispatch.",
+    "projectCategory": "Embedded Systems & Firmware",
+    "projectOwner": "cl0ud & Ojas Singh",
+    "contributors": [
+      "Ojas Singh (Lead Edge-AI Systems Architect)"
+    ],
+    "cl0udInvolvement": "Co-engineered by",
+    "ojasSinghContribution": "Lead Edge-AI systems architecture, YOLOv8 edge perception and lane/zone classifier integration, deterministic Passenger Car Unit (PCU) dynamic green timing formula design, pedestrian queue cutoff gate logic, emergency vehicle priority preemption state machine, vision-based IoU collision detection with automated EMS alerting, virtual 4-way intersection camera simulator, and Raspberry Pi 4B physical GPIO actuator interfacing.",
+    "engineeringScope": [
+      "Edge perception pipeline using YOLOv8 with lane & zone classification for North-South and East-West corridors",
+      "Dynamic density-adaptive green timing: T_green = clamp(T_base + alpha * PCU, T_min, T_max) with PCU = 0.5*moto + 1.0*car + 2.5*truck/bus",
+      "Pedestrian cutoff gate: triggers walk phase when queue >= 5 after 25s cooldown with safe 3s yellow and 2s all-red transitions",
+      "Emergency vehicle corridor preemption: immediate phase truncation and green wave for approaching ambulances and fire trucks",
+      "Vision-based junction collision and stasis detection: IoU > 0.45 for >= 30 frames triggers all-red lockdown and EMS authority alert",
+      "Virtual camera and 4-way intersection simulation HUD for desktop hardware-in-the-loop benchmarking prior to physical wiring",
+      "Raspberry Pi 4B physical GPIO driver: NS (Red 17, Yellow 27, Green 22), EW (Red 10, Yellow 9, Green 11), Pedestrian (Red 5, Green 6, Buzzer 13)"
+    ],
+    "technologyStack": [
+      "Python 3.11",
+      "YOLOv8",
+      "OpenCV",
+      "Pygame",
+      "RPi.GPIO",
+      "Raspberry Pi 4B",
+      "Docker",
+      "Picamera2"
+    ],
+    "repositoryUrl": "https://github.com/Ojas-sta/cl0ud-brand-engineering",
+    "documentationUrl": "https://github.com/Ojas-sta/cl0ud-brand-engineering#readme",
+    "projectStatus": "Completed",
+    "version": "1.0.0",
+    "license": "MIT License",
+    "attributionRequirements": "Mandatory credit: 'Powered by cl0ud | Co-engineered by Ojas Singh'",
+    "thirdPartyDependencies": [
+      "ultralytics",
+      "opencv-python",
+      "pygame",
+      "RPi.GPIO",
+      "numpy"
+    ],
+    "mediaAssets": [
+      "assets/diagrams/traffic-fsm-architecture.svg"
+    ],
+    "projectAcknowledgements": [
+      "Ultralytics YOLO Community",
+      "Raspberry Pi Foundation",
+      "Municipal Traffic Engineering Open Standards"
+    ],
+    "subsystems": [
+      "\u2601 Traffic",
+      "\u2601 Traffic.Flow",
+      "\u2601 Traffic.Vision",
+      "\u2601 Traffic.Preempt",
+      "\u2601 Traffic.Safety",
+      "\u2601 Traffic.Walk",
+      "\u2601 Traffic.Sim",
+      "\u2601 Traffic.GPIO",
+      "\u2601 Traffic.FSM"
+    ]
   }
 ]

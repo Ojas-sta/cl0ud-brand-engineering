@@ -4,7 +4,7 @@
 > **Typography:** `-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Outfit"` (Semi-Bold 600)  
 > **Optical Metrics:** Height = $1.05\times$ Cap-Height | Kerning Gap = $0.18\times$ Cap-Height | Direct Baseline Anchoring  
 > **Colorways:** Solid Black (Light mode / Print), Solid White (Dark mode / OLED), Electric Cyan (Hero UI)  
-> **Asset Count:** 400 Total Vector SVGs (100 Black, 100 White, 100 Cyan, 100 Badges)  
+> **Asset Count:** 440 Total Vector SVGs (110 Black, 110 White, 110 Cyan, 110 Badges)  
 > **Generator Script:** [`tools/assets/generate-subsystem-assets.py`](file:///Users/roopalisingh/Desktop/cl0ud/tools/assets/generate-subsystem-assets.py)
 
 ---
@@ -160,3 +160,13 @@
 | `cloud-perception` | **Cloud • Perception** | Project CLOUD | ![Cloud • Perception Black](black/cl0ud-cloud-perception.svg) | ![Cloud • Perception Cyan](cyan/cl0ud-cloud-perception.svg) | ![Cloud • Perception](badges/cl0ud-cloud-perception-badge.svg) | RealSense D435i Depth & 4D LiDAR SLAM |
 | `cloud-cognition` | **Cloud • Cognition** | Project CLOUD | ![Cloud • Cognition Black](black/cl0ud-cloud-cognition.svg) | ![Cloud • Cognition Cyan](cyan/cl0ud-cloud-cognition.svg) | ![Cloud • Cognition](badges/cl0ud-cloud-cognition-badge.svg) | Dual-Persona ARGUS & Docent Conversational RAG |
 | `loom-iac` | **Loom • IAC** | Embedded IAC & Wiring | ![Loom • IAC Black](black/cl0ud-loom-iac.svg) | ![Loom • IAC Cyan](cyan/cl0ud-loom-iac.svg) | ![Loom • IAC](badges/cl0ud-loom-iac-badge.svg) | Infrastructure-as-Circuit Automated Pinout Header |
+| `traffic` | **Traffic** | Smart Traffic Project | ![Traffic Black](black/cl0ud-traffic.svg) | ![Traffic Cyan](cyan/cl0ud-traffic.svg) | ![Traffic](badges/cl0ud-traffic-badge.svg) | Edge-AI Autonomous Urban Traffic Controller |
+| `flow` | **Flow** | Smart Traffic Project | ![Flow Black](black/cl0ud-flow.svg) | ![Flow Cyan](cyan/cl0ud-flow.svg) | ![Flow](badges/cl0ud-flow-badge.svg) | PCU Density-Adaptive Timing Engine (alpha=1.6s/PCU) |
+| `traffic-flow` | **Traffic • Flow** | Smart Traffic Project | ![Traffic • Flow Black](black/cl0ud-traffic-flow.svg) | ![Traffic • Flow Cyan](cyan/cl0ud-traffic-flow.svg) | ![Traffic • Flow](badges/cl0ud-traffic-flow-badge.svg) | PCU Density-Adaptive Timing Engine (alpha=1.6s/PCU) |
+| `traffic-vision` | **Traffic • Vision** | Smart Traffic Project | ![Traffic • Vision Black](black/cl0ud-traffic-vision.svg) | ![Traffic • Vision Cyan](cyan/cl0ud-traffic-vision.svg) | ![Traffic • Vision](badges/cl0ud-traffic-vision-badge.svg) | YOLOv8 Edge Perception & Lane/Zone Classifier |
+| `traffic-preempt` | **Traffic • Preempt** | Smart Traffic Project | ![Traffic • Preempt Black](black/cl0ud-traffic-preempt.svg) | ![Traffic • Preempt Cyan](cyan/cl0ud-traffic-preempt.svg) | ![Traffic • Preempt](badges/cl0ud-traffic-preempt-badge.svg) | Emergency Vehicle Priority Preemption (Ambulance Corridor) |
+| `traffic-safety` | **Traffic • Safety** | Smart Traffic Project | ![Traffic • Safety Black](black/cl0ud-traffic-safety.svg) | ![Traffic • Safety Cyan](cyan/cl0ud-traffic-safety.svg) | ![Traffic • Safety](badges/cl0ud-traffic-safety-badge.svg) | Collision & Stasis IoU Detector with EMS Dispatch Alert |
+| `traffic-walk` | **Traffic • Walk** | Smart Traffic Project | ![Traffic • Walk Black](black/cl0ud-traffic-walk.svg) | ![Traffic • Walk Cyan](cyan/cl0ud-traffic-walk.svg) | ![Traffic • Walk](badges/cl0ud-traffic-walk-badge.svg) | Vision-Based Pedestrian Queue Cutoff Gate (N>=5) |
+| `traffic-sim` | **Traffic • Sim** | Smart Traffic Project | ![Traffic • Sim Black](black/cl0ud-traffic-sim.svg) | ![Traffic • Sim Cyan](cyan/cl0ud-traffic-sim.svg) | ![Traffic • Sim](badges/cl0ud-traffic-sim-badge.svg) | Virtual 4-Way Intersection Simulator & Diagnostic HUD |
+| `traffic-gpio` | **Traffic • GPIO** | Smart Traffic Project | ![Traffic • GPIO Black](black/cl0ud-traffic-gpio.svg) | ![Traffic • GPIO Cyan](cyan/cl0ud-traffic-gpio.svg) | ![Traffic • GPIO](badges/cl0ud-traffic-gpio-badge.svg) | Raspberry Pi 4B 3-Aspect Physical LED & Buzzer Actuator |
+| `traffic-fsm` | **Traffic • FSM** | Smart Traffic Project | ![Traffic • FSM Black](black/cl0ud-traffic-fsm.svg) | ![Traffic • FSM Cyan](cyan/cl0ud-traffic-fsm.svg) | ![Traffic • FSM](badges/cl0ud-traffic-fsm-badge.svg) | Deterministic 4-Phase Priority State Machine |

@@ -18,6 +18,7 @@
 6. [`PRJ-006: Automated Hydroponic Farming Environmental IoT System`](#prj-006-automated-hydroponic-farming-environmental-iot-system)
 7. [`PRJ-007: Spatial-OS & Vision-Track Web Gesture Computing`](#prj-007-spatial-os--vision-track-web-based-spatial-computing-environment)
 8. [`PRJ-008: ESP32 SmartLock Access System`](#prj-008-esp32-smartlock-access-system)
+9. [`PRJ-009: Edge-AI Smart Traffic Light Controller & Simulator`](#prj-009-edge-ai-smart-traffic-light-controller--simulator)
 
 ---
 
@@ -312,4 +313,55 @@ All pins were empirically validated through hardware bus diagnostics:
 - **Attribution:** `"Powered by cl0ud | Co-engineered by Ojas Singh"`
 - **Subsystem Composition:** `☁ Access.Portal`, `☁ Access.OTP`, `☁ Access.Keypad`, `☁ Access.Latch`, `☁ Access.Feedback`, `☁ Access.FSM`, `☁ Access.IAC`
 - **Repository:** [`https://github.com/Ojas-sta/cl0ud-brand-engineering`](https://github.com/Ojas-sta/cl0ud-brand-engineering)
+
+---
+
+## PRJ-009: Edge-AI Smart Traffic Light Controller & Simulator
+
+[![Powered by cl0ud](https://img.shields.io/badge/Powered%20by-cl0ud-00E5FF?style=for-the-badge&logoColor=0B0F19&labelColor=0B0F19)](https://github.com/Ojas-sta/cl0ud-brand-engineering)
+[![Co-engineered by Ojas Singh](https://img.shields.io/badge/Co--engineered%20by-Ojas%20Singh-1E3A8A?style=for-the-badge&logoColor=white&labelColor=0B0F19)](https://github.com/Ojas-sta)
+
+### 1. Project Overview & Problem Statement
+Traditional urban intersections rely on static cycle timers or black-box reinforcement learning models prone to policy drift and hallucinations. The **Edge-AI Smart Traffic Light Controller and Simulator** is a deterministic, computer-vision-governed priority controller. Deployed on **Raspberry Pi 4B (Picamera2)** and containerized environments, the system features an end-to-end **Virtual Camera and Virtual Traffic Light Simulator** enabling full desktop hardware-in-the-loop validation prior to physical wiring.
+
+### 2. Priority Hierarchy & Core Equations
+The system enforces a strict deterministic preemptive hierarchy:
+$$\text{Accident Lockdown} \;\;>\;\; \text{Emergency Preemption} \;\;>\;\; \text{Pedestrian Cutoff} \;\;>\;\; \text{Density-Adaptive Timing}$$
+
+- **Dynamic Density-Adaptive Timing (Passenger Car Units):**
+  $$\text{PCU} = (0.5 \times N_{\text{moto}}) + (1.0 \times N_{\text{car}}) + (2.5 \times N_{\text{truck/bus}})$$
+  $$T_{\text{green}} = \text{clamp}\left(T_{\text{base}} + (\alpha \times \text{PCU}), \; T_{\text{min}}, \; T_{\text{max}}\right)$$
+  *(Parameters: $T_{\text{base}} = 10\text{s}$, $\alpha = 1.6\text{s/PCU}$, $T_{\text{min}} = 10\text{s}$, $T_{\text{max}} = 50\text{s}$)*
+
+- **Pedestrian Cutoff Gate:**
+  $$\text{Trigger Condition} = (N_{\text{ped}} \ge 5) \;\land\; (T_{\text{elapsed\_since\_last\_walk}} \ge 25\text{s})$$
+  *(Transitions through 3s Yellow and 2s All-Red to open a 15s WALK phase)*
+
+- **Emergency Preemption (Ambulance Corridor):**
+  Immediate truncation of conflicting phases; opens green corridor for verified approaching emergency vehicles until exit.
+
+- **Collision & Stasis Junction Detection:**
+  $$\text{IoU}(Box_A, Box_B) > 0.45 \;\land\; \text{Velocity} \approx 0 \quad (\text{for } \ge 30 \text{ frames})$$
+  Triggers immediate junction ALL-RED lockdown and automated EMS authority dispatch notification.
+
+### 3. Hardware Interconnect & Final Pinout (Raspberry Pi 4B)
+
+| Subsystem | Signal Aspect | RPi 4B GPIO | Physical Pin | Role |
+|---|---|---|---|---|
+| **North-South Approach** | Red LED | **GPIO 17** | Pin 11 | Vehicular Stop aspect |
+| **North-South Approach** | Yellow LED | **GPIO 27** | Pin 13 | Clearance transition (3s) |
+| **North-South Approach** | Green LED | **GPIO 22** | Pin 15 | Active discharge aspect |
+| **East-West Approach** | Red LED | **GPIO 10** | Pin 19 | Vehicular Stop aspect |
+| **East-West Approach** | Yellow LED | **GPIO 9** | Pin 21 | Clearance transition (3s) |
+| **East-West Approach** | Green LED | **GPIO 11** | Pin 23 | Active discharge aspect |
+| **Pedestrian Crosswalk** | Red Don't Walk | **GPIO 5** | Pin 29 | Pedestrian hold aspect |
+| **Pedestrian Crosswalk** | Green Walk | **GPIO 6** | Pin 31 | Pedestrian cross aspect (15s) |
+| **Pedestrian Crosswalk** | Audible Buzzer | **GPIO 13** | Pin 33 | Accessible acoustic beacon |
+
+### 4. Verified Contributions & Attribution
+- **Ojas Singh (Lead Edge-AI Systems Architect):** Lead edge-AI systems architecture, YOLOv8 edge perception and lane/zone classifier integration, deterministic Passenger Car Unit (PCU) dynamic green timing formula design, pedestrian queue cutoff gate logic, emergency vehicle priority preemption state machine, vision-based IoU collision detection with automated EMS alerting, virtual 4-way intersection camera simulator, and Raspberry Pi 4B physical GPIO actuator interfacing.
+- **Attribution:** `"Powered by cl0ud | Co-engineered by Ojas Singh"`
+- **Subsystem Composition:** `☁ Traffic.Flow`, `☁ Traffic.Vision`, `☁ Traffic.Preempt`, `☁ Traffic.Safety`, `☁ Traffic.Walk`, `☁ Traffic.Sim`, `☁ Traffic.GPIO`, `☁ Traffic.FSM`
+- **Repository:** [`https://github.com/Ojas-sta/cl0ud-brand-engineering`](https://github.com/Ojas-sta/cl0ud-brand-engineering)
+
 

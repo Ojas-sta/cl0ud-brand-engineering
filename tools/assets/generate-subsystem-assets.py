@@ -176,6 +176,18 @@ SUBSYSTEMS = [
     ("cloud-perception", "Cloud • Perception", "Cloud", "Perception", "Project CLOUD", "RealSense D435i Depth & 4D LiDAR SLAM"),
     ("cloud-cognition", "Cloud • Cognition", "Cloud", "Cognition", "Project CLOUD", "Dual-Persona ARGUS & Docent Conversational RAG"),
     ("loom-iac", "Loom • IAC", "Loom", "IAC", "Embedded IAC & Wiring", "Infrastructure-as-Circuit Automated Pinout Header"),
+
+    # Edge-AI Smart Traffic Light System (PRJ-009)
+    ("traffic", "Traffic", None, None, "Smart Traffic Project", "Edge-AI Autonomous Urban Traffic Controller"),
+    ("flow", "Flow", "Traffic", "Flow", "Smart Traffic Project", "PCU Density-Adaptive Timing Engine (alpha=1.6s/PCU)"),
+    ("traffic-flow", "Traffic • Flow", "Traffic", "Flow", "Smart Traffic Project", "PCU Density-Adaptive Timing Engine (alpha=1.6s/PCU)"),
+    ("traffic-vision", "Traffic • Vision", "Traffic", "Vision", "Smart Traffic Project", "YOLOv8 Edge Perception & Lane/Zone Classifier"),
+    ("traffic-preempt", "Traffic • Preempt", "Traffic", "Preempt", "Smart Traffic Project", "Emergency Vehicle Priority Preemption (Ambulance Corridor)"),
+    ("traffic-safety", "Traffic • Safety", "Traffic", "Safety", "Smart Traffic Project", "Collision & Stasis IoU Detector with EMS Dispatch Alert"),
+    ("traffic-walk", "Traffic • Walk", "Traffic", "Walk", "Smart Traffic Project", "Vision-Based Pedestrian Queue Cutoff Gate (N>=5)"),
+    ("traffic-sim", "Traffic • Sim", "Traffic", "Sim", "Smart Traffic Project", "Virtual 4-Way Intersection Simulator & Diagnostic HUD"),
+    ("traffic-gpio", "Traffic • GPIO", "Traffic", "GPIO", "Smart Traffic Project", "Raspberry Pi 4B 3-Aspect Physical LED & Buzzer Actuator"),
+    ("traffic-fsm", "Traffic • FSM", "Traffic", "FSM", "Smart Traffic Project", "Deterministic 4-Phase Priority State Machine"),
 ]
 
 def calculate_text_metrics(text, font_size=48.0):
